@@ -22,6 +22,13 @@
       color: #e51f1fb3 !important;
     }
   </style>
+  <!-- 回到顶部 -->
+  <link rel="stylesheet" href="/plugins/toc.css">
+  <!-- Q&F问答 -->
+  <link rel="stylesheet" href="/plugins/accordion.css">
+  <!-- 现代动画终端窗口 -->
+  <link rel="stylesheet" href="/plugins/termynal.css">
+  <link rel="stylesheet" href="/plugins/custom.css">
 </head>
 
 <body>
@@ -92,7 +99,24 @@
         headings: 'h2, h3, h4, h5, h6',
         title: ''
       },
-
+      // GitHub贡献者
+      contributors: {
+        repo: 'Erhai-lake/elake-docs',
+        ignores: [],
+        style: {
+          color: '#ffffff',
+          bgColor: '#404040'
+        },
+        image: {
+          size: 45,
+          isRound: true,
+          margin: '0.5em'
+        },
+        load: {
+          isOpen: true,
+          color: "#80ceff"
+        }
+      },
       // 自定义
       plugins: [
         // 前往GitHub编辑和最后更新时间
@@ -103,6 +127,17 @@
             const LastUpdatedTime = new Date(document.lastModified).toLocaleString().replace(/\//g, '-');
             const ExtraHtml = `<div align="right" style="color: gray; font-size: 14px; margin-top: 10px;">📝<a href="${GitHubEditUrl}" target="_blank" rel="noopener noreferrer">前往GitHub编辑</a>&nbsp;&nbsp;&nbsp;<a href="${GiteeEditUrl}" target="_blank" rel="noopener noreferrer">前往Gitee编辑</a><br><br>最后更新时间: ${LastUpdatedTime}</div>`;
             return Html + ExtraHtml;
+          })
+        },
+        // 现代动画终端窗口
+        function (hook, vm) {
+          hook.beforeEach(function (content) {
+            return beforeEach(content);
+          })
+          hook.doneEach(function () {
+            setupTermynal();
+            showRandomAnnouncement('announce-left', 5000)
+            showRandomAnnouncement('announce-right', 10000)
           });
         }
       ]
@@ -131,10 +166,13 @@
   <script src="/plugins/docsify-backTop.min.js"></script>
   <!-- 右侧目录 -->
   <script src="/plugins/toc.js"></script>
-  <link rel="stylesheet" href="/plugins/toc.css">
   <!-- Q&F问答 -->
-  <link rel="stylesheet" href="/plugins/accordion.css">
   <script src="/plugins/accordion.js"></script>
+  <!-- 现代动画终端窗口 -->
+  <script src="/plugins/termynal.js"></script>
+  <script src="/plugins/custom.js"></script>
+  <!-- GitHub贡献者 -->
+  <script src="/plugins/contributors.js"></script>
 
   <!-- 代码高亮工具语法支持 -->
   <script src="/plugins/prism-java.min.js"></script>
