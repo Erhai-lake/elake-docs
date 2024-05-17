@@ -7,20 +7,3 @@
 [GitHub](https://github.com/Erhai-lake/elake-docs)
 
 [Gitee](https://gitee.com/erhai-lake/elake-docs)
-
-计划编写的文档
-
-- [x] Git
-- [x] Html
-- [x] CSS
-- [ ] JavaScript
-- [ ] Vue
-- [ ] Ionic
-- [ ] Python
-- [ ] Godot
-- [ ] Java
-- [ ] SpingBoot
-- [ ] C#
-- [ ] .NET
-- [ ] C
-- [ ] C++
