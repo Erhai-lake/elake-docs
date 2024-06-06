@@ -66,7 +66,7 @@ scene.world.createItemEntity([2, 1, 2], [0.5, 0, 0], 'minecraft:iron_ingot');
 
 以下分别是 **([2, 1, 2], [0.5, 0, 0])** 和 **([3, 1, 2], [0, 0, 0])**
 
-![13-1](assets/13-1.gif)
+![14-1](assets/14-1.gif)
 
 其返回值为 **Internal.ElementLink<Internal.EntityElement>**
 

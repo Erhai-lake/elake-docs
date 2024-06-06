@@ -27,7 +27,7 @@ Ponder.tags((event) => {
 });
 ```
 
-![4-1](assets/4-1.gif)
+![5-1](assets/5-1.gif)
 
 ## 其二 画龙点睛
 
