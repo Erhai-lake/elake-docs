@@ -1,6 +1,6 @@
 # stats
 
-材料部件定义***\*文件位置****`data/ModID/tinkering/materials/stats/ID.json`****
+材料部件定义**文件位置**`data/ModID/tinkering/materials/stats/ID.json`
 
 ## 键名
 

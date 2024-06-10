@@ -80,10 +80,10 @@ Ponder.registry((event) => {
 });
 ```
 
-### 注意要点
-
-* 会依读取的顺序成为第 1 ~ n 个场景, 透过翻页来切换
-* 不同场景的 Ponder ID 一样并不会导致报错, 但会产生`标题错误`或者`文本错误`等问题
+> [!ATTENTION]
+>
+> * 会依读取的顺序成为第 1 ~ n 个场景, 透过翻页来切换
+> * 不同场景的 Ponder ID 一样并不会导致报错, 但会产生`标题错误`或者`文本错误`等问题
 
 ## 配置起始结构
 
@@ -254,9 +254,10 @@ scene.addLazyKeyframe();
 
 ![3-8](assets/3-8.png)
 
-* 注意 : 离你最近的地板方块的坐标是 `[0, 0, 0]`, 往`左`/`上`/`右`分别对应 `x, y, z`
+> [!ATTENTION]
+> 离你最近的地板方块的坐标是 `[0, 0, 0]`, 往`左`/`上`/`右`分别对应 `x, y, z`
 
-> 根据上图的结构我们得知右边的鼓风机的位置在 `[2, 　1, 　1]`, 那我们接着写
+根据上图的结构我们得知右边的鼓风机的位置在 `[2, 　1, 　1]`, 那我们接着写
 
 ```js
 // 在 [2, 1, 2] 放置鼓风机方块, 若该位置原本有方块, 则破坏该原本方块
@@ -293,11 +294,11 @@ scene.world.showSection([3, 1, 1, 1, 1, 3], Direction.down);
 
 例如: 使用 `showStructure(n)` 时, y = 0 ~ n 的个格子全部变为`已显示状态`, 即使是空气方块
 
-### 注意
-
-* `[3, 1, 1, 1, 1, 3]`同样可以写为`[1, 1, 1, 3, 1, 3]`
-* 并且无论哪种写法, `showSection`动画都将持续 15 Tick
-* `showSection`方法将会把显示的区域合并到`baseWorldSection`中, 即`scene.ponderjs$getPonderScene().baseWorldSection`
+> [!ATTENTION]
+>
+> * `[3, 1, 1, 1, 1, 3]`同样可以写为`[1, 1, 1, 3, 1, 3]`
+> * 并且无论哪种写法, `showSection`动画都将持续 15 Tick
+> * `showSection`方法将会把显示的区域合并到`baseWorldSection`中, 即`scene.ponderjs$getPonderScene().baseWorldSection`
 
 ## 修改方块状态
 
