@@ -117,6 +117,16 @@
                     color: "#80ceff"
                 }
             },
+            // 字数统计
+            count: {
+                countable: true,
+                language: 'chinese',
+                isExpected: false
+            },
+            // 加载外部MD
+            remoteMarkdown: {
+                tag: '外部MD',
+            },
             // 自定义
             plugins: [
                 // 前往GitHub编辑和最后更新时间
@@ -125,7 +135,7 @@
                         const GitHubEditUrl = `https://github.com/Erhai-lake/elake-docs/blob/master/${vm.route.file}`;
                         const GiteeEditUrl = `https://gitee.com/erhai-lake/elake-docs/blob/master/${vm.route.file}`;
                         const LastUpdatedTime = new Date(document.lastModified).toLocaleString().replace(/\//g, '-');
-                        const ExtraHtml = `<div align="right" style="color: gray; font-size: 14px; margin-top: 10px;">📝<a href="${GitHubEditUrl}" target="_blank" rel="noopener noreferrer">前往GitHub编辑</a>&nbsp;&nbsp;&nbsp;<a href="${GiteeEditUrl}" target="_blank" rel="noopener noreferrer">前往Gitee编辑</a><br><br>最后更新时间: ${LastUpdatedTime}</div>`;
+                        const ExtraHtml = `<div align="right" style="color: gray; font-size: 14px; margin-top: 10px;">📝<a href="${GitHubEditUrl}" target="_blank" rel="noopener noreferrer">前往GitHub编辑</a><br><br>📝<a href="${GiteeEditUrl}" target="_blank" rel="noopener noreferrer">前往Gitee编辑</a><br><br>最后更新时间: ${LastUpdatedTime}</div>`;
                         return Html + ExtraHtml;
                     })
                 },
@@ -146,11 +156,11 @@
     <!-- 核心 -->
     <script src="/docsify.min.js"></script>
     <!-- 插件 -->
-    <!-- 外链脚本 - External Script -->
+    <!-- 外链脚本 -->
     <script src="/plugins/external-script.min.js"></script>
     <!-- 搜索 -->
     <script src="/plugins/search.min.js"></script>
-    <!-- 图片缩放 - Zoom image -->
+    <!-- 图片缩放 -->
     <script src="/plugins/zoom-image.min.js"></script>
     <!-- 复制到剪贴板 -->
     <script src="/plugins/docsify-copy-code.min.js"></script>
@@ -173,7 +183,10 @@
     <script src="/plugins/custom.js"></script>
     <!-- GitHub贡献者 -->
     <script src="/plugins/contributors.js"></script>
-
+    <!-- 字数统计 -->
+    <script src="/plugins/countable.js"></script>
+    <!-- 加载外部MD -->
+    <script src="/plugins/docsify-remote-markdown.min.js"></script>
     <!-- 代码高亮工具语法支持 -->
     <script src="/plugins/prism-java.min.js"></script>
     <script src="/plugins/prism-json.min.js"></script>
