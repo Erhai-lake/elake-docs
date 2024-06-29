@@ -365,8 +365,8 @@ scene.world.modifyTileNBT([3, 3, 2], (nbt) => {
 
 ## 进阶玩法(了解好基础后再来!)
 
-[进阶 1](Tutorials/Minecraft/PonderJs-Tutorials/Section.md)
-[进阶 2](Tutorials/Minecraft/PonderJs-Tutorials/Scene.md)
+[进阶 1](Section.md)
+[进阶 2](Scene.md)
 
 ## 文本显示
 
@@ -462,7 +462,7 @@ scene.showControls(80, [2, 1, 2], "down")
  .whileSneaking(); // 在框内显示 潜行 的图示
 ```
 
-[PonderIcons.md 跳转连接](Tutorials/Minecraft/PonderJs-Tutorials/PonderIcons.md).
+[PonderIcons.md 跳转连接](PonderIcons.md).
 
 ## 掉落物
 

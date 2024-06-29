@@ -19,9 +19,9 @@ scene.world.showSection([2, 1, 1], Facing.down);
 scene.world.showSection([2, 1, 1], 'down');
 ```
 
-关于方向 [Direction & Facing](Tutorials/Minecraft/PonderJs-Tutorials/Facing.md)
+关于方向 [Direction & Facing](Facing.md)
 
-> 以下代码节录自 [scene_world_function.md](Tutorials/Minecraft/PonderJs-Tutorials/scene_world_function.md)
+> 以下代码节录自 [scene_world_function.md](scene_world_function.md)
 
 ```js
 showSection(arg0: Internal.Selection_, arg1: Internal.Direction_): void_;
@@ -34,7 +34,7 @@ showSection(arg0: Internal.Selection_, arg1: Internal.Direction_): void_;
 scene.world.hideSection([2, 1, 1], 'down');
 ```
 
-> 以下代码节录自 [scene_world_function.md](Tutorials/Minecraft/PonderJs-Tutorials/scene_world_function.md)
+> 以下代码节录自 [scene_world_function.md](scene_world_function.md)
 
 ```js
 hideSection(arg0: Internal.Selection_, arg1: Internal.Direction_): void_;
@@ -44,7 +44,7 @@ hideSection(arg0: Internal.Selection_, arg1: Internal.Direction_): void_;
 
 等待大佬编辑
 
-> 以下代码节录自 [scene_world_function.md](Tutorials/Minecraft/PonderJs-Tutorials/scene_world_function.md)
+> 以下代码节录自 [scene_world_function.md](scene_world_function.md)
 
 ```js
 hideIndependentSection(arg0: Internal.ElementLink_<Internal.WorldSectionElement>, arg1: Internal.Direction_, arg2: number): void_;

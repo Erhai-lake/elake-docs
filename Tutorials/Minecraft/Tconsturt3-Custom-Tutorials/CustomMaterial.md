@@ -37,7 +37,7 @@ Ciallo ～(∠·ω< )⌒☆ 这里是**小狼娘fufu**~,你也可以叫我**fufu
 
 ## 创建材料定义-**definition**
 
-> 打开`客户端/data/.../definition/ID.json`参考[定义(definition)](Tutorials/Minecraft/Tconsturt3-Custom-Tutorials/definition.md>)创建一个材料定义文件
+> 打开`客户端/data/.../definition/ID.json`参考[定义(definition)](definition.md)创建一个材料定义文件
 
 [示例 >>>](https://github.com/LitterWolf-fufu/Tconstruct-3-Custom-Tutorials/tree/main/Packs/data/tconstruct/tinkering/materials/definition/clay.json)
 
@@ -52,7 +52,7 @@ Ciallo ～(∠·ω< )⌒☆ 这里是**小狼娘fufu**~,你也可以叫我**fufu
 
 ## 创建材料部件-**stats**
 
-> 打开`客户端/data/.../stats/ID.json`参考[部件(stats)](Tutorials/Minecraft/Tconsturt3-Custom-Tutorials/stats.md>),创建一个材料部件文件
+> 打开`客户端/data/.../stats/ID.json`参考[部件(stats)](stats.md),创建一个材料部件文件
 
 [示例 >>>](https://github.com/LitterWolf-fufu/Tconstruct-3-Custom-Tutorials/tree/main/Packs/data/tconstruct/tinkering/materials/stats/clay.json)
 
@@ -67,7 +67,7 @@ Ciallo ～(∠·ω< )⌒☆ 这里是**小狼娘fufu**~,你也可以叫我**fufu
 
 ## 创建材料特性-**traits**
 
-> 打开`客户端/data/.../traits/ID.json`参考[特性(traits)](Tutorials/Minecraft/Tconsturt3-Custom-Tutorials/traits.md>),创建一个材料特性文件
+> 打开`客户端/data/.../traits/ID.json`参考[特性(traits)](traits.md),创建一个材料特性文件
 
 [示例 >>>](https://github.com/LitterWolf-fufu/Tconstruct-3-Custom-Tutorials/tree/main/Packs/data/tconstruct/tinkering/materials/traits/clay.json)
 
@@ -113,7 +113,7 @@ Ciallo ～(∠·ω< )⌒☆ 这里是**小狼娘fufu**~,你也可以叫我**fufu
 
 > 打开`客户端/data/.../recipes/`目录写入材料配方文件
 
-详情查看 [配方(Recipes)](Tutorials/Minecraft/Tconsturt3-Custom-Tutorials/CustomRecipes.md)
+详情查看 [配方(Recipes)](CustomRecipes.md)
 
 ## 创建材料语言文件
 
@@ -137,7 +137,7 @@ Ciallo ～(∠·ω< )⌒☆ 这里是**小狼娘fufu**~,你也可以叫我**fufu
 
 ## 创建材料材质
 
-> 打开`客户端/assets/.../materials/ID.json`参考[材质(assets)](Tutorials/Minecraft/Tconsturt3-Custom-Tutorials/assets.md>)，创建一个材料材质文件
+> 打开`客户端/assets/.../materials/ID.json`参考[材质(assets)](assets.md),创建一个材料材质文件
 
 [示例 >>>](https://github.com/LitterWolf-fufu/Tconstruct-3-Custom-Tutorials/tree/main/Packs/assets/tconstruct/tinkering/materials/clay.json)
 

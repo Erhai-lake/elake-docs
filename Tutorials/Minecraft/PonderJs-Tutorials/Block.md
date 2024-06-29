@@ -4,7 +4,7 @@
 
 ## 放置方块(怎么又是你)
 
-根据 [scene_world_function.md](Tutorials/Minecraft/PonderJs-Tutorials/scene_world_function.md) 我们可知放置方块有两种函数
+根据 [scene_world_function.md](scene_world_function.md) 我们可知放置方块有两种函数
 
 ```js
 setBlocks(arg0: Internal.Selection_, arg1: boolean_, arg2: Internal.BlockState_): void_;
@@ -14,7 +14,7 @@ setBlocks(arg0: Internal.Selection_, arg1: Internal.BlockState_, arg2: boolean_)
 setBlock(arg0: BlockPos_, arg1: Internal.BlockState_, arg2: boolean_): void_;
 ```
 
-**setBlocks**已经于 [Ponder](Tutorials/Minecraft/PonderJs-Tutorials/Ponder.md) 介绍过, 此处不多赘述, 此处着重介绍**setBlock**
+**setBlocks**已经于 [Ponder](Ponder.md) 介绍过, 此处不多赘述, 此处着重介绍**setBlock**
 
 我们可以发现**setBlocks**与**setBlock**的第一个参数种类是不同的
 
@@ -83,7 +83,7 @@ scene.world.modifyBlock([2, 1, 2], () => Block.id("minecraft:oak_trapdoor").with
 scene.world.modifyBlocks([2, 1, 3, 3, 1, 3], () => Block.id("minecraft:oak_trapdoor").with("type", "top"), true);
 ```
 
-> 以下代码节录自 [scene_world_function.md](Tutorials/Minecraft/PonderJs-Tutorials/scene_world_function.md)
+> 以下代码节录自 [scene_world_function.md](scene_world_function.md)
 
 ```js
 modifyBlocks(arg0: Internal.Selection_, arg1: Internal.BlockStateFunction_, arg2: boolean_): void_;
@@ -107,7 +107,7 @@ scene.world.modifyBlockEntityNBT([2, 1, 2], nbt => { nbt.Speed = 16 });
 scene.world.modifyBlockEntityNBT([2, 1, 2], true, nbt => { nbt.Speed = 16 });
 ```
 
-> 以下代码节录自 [scene_world_function.md](Tutorials/Minecraft/PonderJs-Tutorials/scene_world_function.md)
+> 以下代码节录自 [scene_world_function.md](scene_world_function.md)
 
 ```js
 modifyBlockEntityNBT(arg0: Internal.Selection_, arg1: boolean_, arg2: Internal.Consumer_<Internal.CompoundTag>): void_;
@@ -118,7 +118,7 @@ modifyBlockEntityNBT(arg0: Internal.Selection_, arg1: Internal.Consumer_<Interna
 
 等待大佬编辑
 
-> 以下代码节录自 [scene_world_function.md](Tutorials/Minecraft/PonderJs-Tutorials/scene_world_function.md)
+> 以下代码节录自 [scene_world_function.md](scene_world_function.md)
 
 ```js
 modifyBlockEntity<T extends Internal.BlockEntity>(arg0: BlockPos_, arg1: T, arg2: Internal.Consumer_<T>): void_;

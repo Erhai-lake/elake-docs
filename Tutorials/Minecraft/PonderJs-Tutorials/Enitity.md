@@ -18,7 +18,7 @@ scene.world.createEntity("minecraft:sheep", [2.5, 1, 2.5], event => {
 
 其返回值为**Internal.ElementLink<Internal.EntityElement>**
 
-> 以下代码节录自 [scene_world_function.md](Tutorials/Minecraft/PonderJs-Tutorials/scene_world_function.md)
+> 以下代码节录自 [scene_world_function.md](scene_world_function.md)
 
 ```js
 createEntity(arg0: Internal.EntityType_<any>, arg1: Vec3d_, arg2: Internal.Consumer_<Internal.Entity>): Internal.ElementLink<Internal.EntityElement>;
@@ -49,7 +49,7 @@ scene.world.modifyEntity(_sheep, event => {
 });
 ```
 
-> 以下代码节录自 [scene_world_function.md](Tutorials/Minecraft/PonderJs-Tutorials/scene_world_function.md)
+> 以下代码节录自 [scene_world_function.md](scene_world_function.md)
 
 ```js
 modifyEntity(arg0: Internal.ElementLink_<Internal.EntityElement>, arg1: Internal.Consumer_<Internal.Entity>): void_;
@@ -70,7 +70,7 @@ scene.world.createItemEntity([2, 1, 2], [0.5, 0, 0], 'minecraft:iron_ingot');
 
 其返回值为 **Internal.ElementLink<Internal.EntityElement>**
 
-> 以下代码节录自 [scene_world_function.md](Tutorials/Minecraft/PonderJs-Tutorials/scene_world_function.md)
+> 以下代码节录自 [scene_world_function.md](scene_world_function.md)
 
 ```js
 createItemEntity(arg0: Vec3d_, arg1: Vec3d_, arg2: Internal.ItemStack_): Internal.ElementLink<Internal.EntityElement>;
@@ -88,7 +88,7 @@ var _sheep = scene.world.createEntity("minecraft:sheep", [2.5, 1, 2.5]);
 scene.world.removeEntity(_sheep);
 ```
 
-> 以下代码节录自 [scene_world_function.md](Tutorials/Minecraft/PonderJs-Tutorials/scene_world_function.md)
+> 以下代码节录自 [scene_world_function.md](scene_world_function.md)
 
 ```js
 removeEntity(arg0: Internal.ElementLink_<Internal.EntityElement>): void_;

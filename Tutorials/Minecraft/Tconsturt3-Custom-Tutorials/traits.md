@@ -8,7 +8,7 @@
 
 包含一个或多个特性对象(object):
 
-* `name`([traitID](Tutorials/Minecraft/Tconsturt3-Custom-Tutorials/Gammers.md#traitid)):特性名称,必须与`level`同时存在
+* `name`([traitID](Gammers.md#traitid)):特性名称,必须与`level`同时存在
 * `level`(integer):特性等级,必须与`name`同时存在
 * `perStat`(对象):指定特性,该材料指定可制作的部件拥有的特性
 * `tconstruct:head`(数组):代表**头部**部件,包含一个或多个特性对象(object)

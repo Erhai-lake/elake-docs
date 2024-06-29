@@ -22,16 +22,16 @@
 
 ## 材料配方(material)
 
-此配方定义一个材料与物品的关联.使物品可用于[**部件制造**](Tutorials/Minecraft/Tconsturt3-Custom-Tutorials/Gammers.md#部件制造)和[**工具修复**](Tutorials/Minecraft/Tconsturt3-Custom-Tutorials/Gammers.md#工具修复)
+此配方定义一个材料与物品的关联.使物品可用于[**部件制造**](Gammers.md#部件制造)和[**工具修复**](Gammers.md#工具修复)
 
 ### 键名
 
 * `type`(String):`tconstruct:material`
-* `ingredient`([ingredient](Tutorials/Minecraft/Tconsturt3-Custom-Tutorials/Gammers.md#ingredient)):物品输入,一般情况下一个或一类物品只与一种材料相关
+* `ingredient`([ingredient](Gammers.md#ingredient)):物品输入,一般情况下一个或一类物品只与一种材料相关
 * `value`(Integer):一个物品所能提供的以"锭"为基础的值.默认为 1
 * `needed`(Integer):制造一个部件需要的以"锭"为基础的值.默认为 1
-* `material`([materialID](Tutorials/Minecraft/Tconsturt3-Custom-Tutorials/Gammers.md#materialid)):关联的材料命名空间
-* `leftover`([itemOutput](Tutorials/Minecraft/Tconsturt3-Custom-Tutorials/Gammers.md#itemoutput)):(可选)当"needed"不是"value"的倍数,返还物品
+* `material`([materialID](Gammers.md#materialid)):关联的材料命名空间
+* `leftover`([itemOutput](Gammers.md#itemoutput)):(可选)当"needed"不是"value"的倍数,返还物品
 
 ### 例
 
@@ -77,9 +77,9 @@
 ### 键名
 
 - `type`(String):``tconstruct:material_fluid`
-- `fluid`([fluidIngredient](Tutorials/Minecraft/Tconsturt3-Custom-Tutorials/Gammers.md#fluidingredient)):输入流体
-- `output`([materialID](Tutorials/Minecraft/Tconsturt3-Custom-Tutorials/Gammers.md#materialid)):关联输出的工具材料
-- `input`([materialID](Tutorials/Minecraft/Tconsturt3-Custom-Tutorials/Gammers.md#materialid)):(可选)关联输入的工具材料.若此项不为空,则液体浇筑在`input`材料部件输出`output`对应的材料部件
+- `fluid`([fluidIngredient](Gammers.md#fluidingredient)):输入流体
+- `output`([materialID](Gammers.md#materialid)):关联输出的工具材料
+- `input`([materialID](Gammers.md#materialid)):(可选)关联输入的工具材料.若此项不为空,则液体浇筑在`input`材料部件输出`output`对应的材料部件
 - `temperature`(Integer):使这个配方可用需要的最低温度
 
 ### 例
@@ -105,8 +105,8 @@
 ### 键名
 
 - `type`(String):`tconstruct:material_melting`
-- `input`([materialID](Tutorials/Minecraft/Tconsturt3-Custom-Tutorials/Gammers.md#materialid)):将被融化的工具材料
-- `result`([fluidStack](Tutorials/Minecraft/Tconsturt3-Custom-Tutorials/Gammers.md#fluidstack)):输出的流体
+- `input`([materialID](Gammers.md#materialid)):将被融化的工具材料
+- `result`([fluidStack](Gammers.md#fluidstack)):输出的流体
 - `temperature`(Integer):使这个配方可用需要的最低温度
 
 ### 例
