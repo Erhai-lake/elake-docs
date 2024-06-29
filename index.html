@@ -139,6 +139,16 @@
             remoteMarkdown: {
                 tag: '外部MD',
             },
+            // mermaid图表
+            mermaidConfig: {
+                querySelector: ".mermaid"
+            },
+            // mermaid图表缩放
+            mermaidZoom: {
+                minimumScale: 1,
+                maximumScale: 5,
+                zoomPannel: false
+            },
             // 自定义
             plugins: [
                 // 前往GitHub编辑和最后更新时间
@@ -203,6 +213,17 @@
     <script src="/plugins/prism-java.min.js"></script>
     <script src="/plugins/prism-json.min.js"></script>
     <script src="/plugins/prism-json5.min.js"></script>
+    <!-- mermaid图表缩放D3前置 -->
+    <script src="/plugins/d3@7.js"></script>
+    <!-- mermaid图表 -->
+    <script type="module">
+        import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+        mermaid.initialize({ startOnLoad: true });
+        window.mermaid = mermaid;
+    </script>
+    <script src="/plugins/docsify-mermaid.js"></script>
+    <!-- mermaid图表缩放 -->
+    <script src="/plugins/docsify-mermaid-zoom.js"></script>
 </body>
 
 </html>
