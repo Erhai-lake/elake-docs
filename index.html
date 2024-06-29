@@ -10,10 +10,18 @@
     <link rel="icon" href="assets/logo.svg">
     <link rel="stylesheet" href="vue.css">
     <style>
-        /* 选项卡 */
         :root {
+            /* 选项卡 */
             --docsifytabs-border-color: #ededed;
             --docsifytabs-tab-highlight-color: #80CEFF;
+
+            /* 导航栏 */
+            --theme-color: #80CEFF;
+        }
+
+        /* 字数统计 */
+        .markdown-section>:first-child {
+            margin-top: 20px !important
         }
 
         /* 加粗 */
@@ -22,7 +30,9 @@
             color: #e51f1fb3 !important;
         }
     </style>
-    <!-- 回到顶部 -->
+    <!-- 导航栏 -->
+    <link rel="stylesheet" href="/plugins/navbar-fixed.css">
+    <!-- 右侧目录 -->
     <link rel="stylesheet" href="/plugins/toc.css">
     <!-- Q&F问答 -->
     <link rel="stylesheet" href="/plugins/accordion.css">
@@ -37,16 +47,18 @@
         window.$docsify = {
             // 文档标题
             name: '洱海文档',
-            // GitHub挂机
-            repo: 'Erhai-lake',
             // 渲染封面
             coverpage: '封面.md',
             // 只在主页渲染封面
             onlyCover: true,
+            // 加载导航栏
+            loadNavbar: '导航栏.md',
             // 加载侧边栏
             loadSidebar: '目录.md',
             // 自动跳转到页面顶部
             auto2top: true,
+            // 启用相对路径
+            relativePath: true,
             // 搜索
             search: {
                 maxAge: 86400000,
