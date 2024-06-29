@@ -20,7 +20,7 @@ switch (数据) {
 
 例:如果数据跟值2全等,则执行代码2
 
-> [!ATTENTION]
+> [!caution]
 >
 > * `Switch case`语句一般用于等值判断,不适合区间判断
 > * `Switch case`语句一般需要搭配`break`关键词使用,没有`break`会造成`case`穿透

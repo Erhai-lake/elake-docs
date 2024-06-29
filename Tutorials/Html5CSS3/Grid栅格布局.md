@@ -91,7 +91,7 @@
 
 `grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));`:这种写法可以用来做响应式布局,`auto-fill`主轴上指定的宽度或者重复次数是最大可能的正整数,`minmax`最小值`255px`,`minmax`最大值`1fr`代表剩余空间的比例
 
-> [!ATTENTION]
+> [!caution]
 >
 > 要实现这种响应式布局,父容器不能使用固定宽度,可以将父容器改为如:`80%`,这样就能根据屏幕的宽度,自动展示一行展示几个了
 

@@ -6,7 +6,7 @@ Less是一个**CSS预处理器**,Less文件后缀是`.less`
 
 扩充了CSS语言,使CSS具备一定的逻辑性,计算能力
 
-> [!ATTENTION]
+> [!caution]
 >
 > 浏览器不识别Less代码,目前阶段,网页要引入对应的CSS文件
 
