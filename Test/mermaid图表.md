@@ -9,7 +9,7 @@ flowchart TD
     C -->|Three| F[fa:fa-car Car]
 ```
 
-```md
+```markdown
 ` ` `mermaid
 flowchart TD
     A[Christmas] -->|Get money| B(Go shopping)

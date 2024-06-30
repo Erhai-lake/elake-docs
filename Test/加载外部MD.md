@@ -1,6 +1,6 @@
 # 加载外部MD
 
-```md
+```markdown
 [外部MD] (https://raw.githubusercontent.com/docsifyjs/docsify/develop/README.md)
 ```
 
