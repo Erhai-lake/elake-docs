@@ -4,15 +4,10 @@ window.$docsify = {
         // 前往仓库编辑和最后更新时间
         function (hook, vm) {
             hook.beforeEach(function (Html) {
-                const GitHubEditUrl = `https://github.com/${this.$docsify.Edit.GitHub}/blob/master/${vm.route.file}`;
-                const GiteeEditUrl = `https://gitee.com/${this.$docsify.Edit.Gitee}/blob/master/${vm.route.file}`;
+                const GitHubEditUrl = 'https://github.com/' + this.$docsify.Edit.GitHub + '/blob/master/' + vm.route.file;
+                const GiteeEditUrl = 'https://gitee.com/' + this.$docsify.Edit.Gitee + '/blob/master/' + vm.route.file;
                 const LastUpdatedTime = new Date(document.lastModified).toLocaleString().replace(/\//g, '-');
-                const ExtraHtml = `<div align="right" style="margin-top: 10px;">
-                    <span style="margin: 0 5px">📝<a href="${GitHubEditUrl}" target="_blank" rel="noopener noreferrer">前往GitHub编辑</a></span>
-                    <span style="margin: 0 5px">📝<a href="${GiteeEditUrl}" target="_blank" rel="noopener noreferrer">前往Gitee编辑</a></span>
-                    <br><br>
-                    <span>最后更新时间: ${LastUpdatedTime}</span>
-                    </div>`;
+                const ExtraHtml = '<div align="right" style="margin-top: 10px;"><span style="margin: 0 5px">📝<a href="' + GitHubEditUrl + '" target="_blank" rel="noopener noreferrer">前往GitHub编辑</a></span><span style="margin: 0 5px">📝<a href="' + GiteeEditUrl + '" target="_blank" rel="noopener noreferrer">前往Gitee编辑</a></span><br><br><span>最后更新时间: ' + LastUpdatedTime + '</span></div>'
                 return Html + ExtraHtml;
             })
         },
