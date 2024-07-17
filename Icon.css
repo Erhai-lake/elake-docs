@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Icon";
+  src: url('/Font/Icon.woff2') format('woff2'),
+       url('/Font/Icon.woff') format('woff'),
+       url('/Font/Icon.ttf') format('truetype');
+}
+
+.Icon {
+  font-family: "Icon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.Icon-Mail:before {
+  content: "\e667";
+}
+
+.Icon-yunpan:before {
+  content: "\e65a";
+}
+
+.Icon-github:before {
+  content: "\e64c";
+}
+
+.Icon-shouye:before {
+  content: "\e60f";
+}
+
+.Icon-jiankong:before {
+  content: "\e6c1";
+}
+
+.Icon-bangzhuwendang:before {
+  content: "\e6b7";
+}
+
