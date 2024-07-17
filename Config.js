@@ -45,7 +45,7 @@ window.$docsify = {
     search: {
         maxAge: 86400000,
         paths: 'auto',
-        depth: 6,
+        depth: 10,
         placeholder: '搜索...',
         noData: '未找到结果,换个搜索词试试?',
         namespace: 'web'
