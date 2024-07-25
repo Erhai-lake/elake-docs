@@ -82,16 +82,21 @@ window.$docsify = {
     },
     // 广告
     ads: [
+        // 雨云广告
+        // {
+        //     img: 'assets/ad1.png',
+        //     href: 'https://www.rainyun.com/ELake'
+        // }
         {
-            img: 'assets/ad1.png',
-            href: 'https://www.rainyun.com/ELake'
+            img: 'https://www.loliapi.com/acg/',
+            href: '/'
         }
     ],
     // 右侧大纲
     toc: {
         scope: '.markdown-section',
         headings: 'h2, h3, h4, h5, h6',
-        title: ''
+        title: '　'
     },
     // GitHub贡献者
     contributors: {
