@@ -11,33 +11,29 @@ document.querySelector('css选择器')
 返回的是一个**HTMLElement对象**,如果没有匹配到,返回**null**
 
 ```html
-<body>
-    <div>abc</div>
-    <div class="Test">123</div>
-    <ul>
-        <li>Test1</li>
-        <li>Test2</li>
-        <li>Test3</li>
-        <li>Test4</li>
-        <li>Test5</li>
-    </ul>
-    <script>
-        const DIV1 = document.querySelector('div')
-        console.log(DIV1);
-        console.log(DIV1.innerHTML);
-        // abc
-
-        const DIV2 = document.querySelector('.Test')
-        console.log(DIV2);
-        console.log(DIV2.innerHTML);
-        // 123
-
-        const LI = document.querySelector('ul li:first-child')
-        console.log(LI);
-        console.log(LI.innerHTML);
-        // Test1
-    </script>
-</body>
+<div>abc</div>
+<div class="Test">123</div>
+<ul>
+    <li>Test1</li>
+    <li>Test2</li>
+    <li>Test3</li>
+    <li>Test4</li>
+    <li>Test5</li>
+</ul>
+<script>
+    const DIV1 = document.querySelector('div')
+    console.log(DIV1)
+    console.log(DIV1.innerHTML)
+    // abc
+    const DIV2 = document.querySelector('.Test')
+    console.log(DIV2)
+    console.log(DIV2.innerHTML)
+    // 123
+    const LI = document.querySelector('ul li:first-child')
+    console.log(LI)
+    console.log(LI.innerHTML)
+    // Test1
+</script>
 ```
 
 和CSS一模一样,不会CSS的回去重修[Html5CSS3](../Html5CSS3/前言.md)
@@ -49,21 +45,19 @@ document.querySelectorAll('css选择器')
 ```
 
 ```html
-<body>
-    <ul>
-        <li>Test1</li>
-        <li>Test2</li>
-        <li>Test3</li>
-        <li>Test4</li>
-        <li>Test5</li>
-    </ul>
-    <script>
-        const LI = document.querySelectorAll('ul li')
-        console.log(LI);
-        console.log(LI[0 ].innerHTML);
-        // Test1
-    </script>
-</body>
+<ul>
+    <li>Test1</li>
+    <li>Test2</li>
+    <li>Test3</li>
+    <li>Test4</li>
+    <li>Test5</li>
+</ul>
+<script>
+    const LI = document.querySelectorAll('ul li')
+    console.log(LI)
+    console.log(LI[0 ].innerHTML)
+    // Test1
+</script>
 ```
 
 返回的是**NodeList对象集合**

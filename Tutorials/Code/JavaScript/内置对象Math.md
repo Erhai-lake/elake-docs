@@ -21,9 +21,9 @@
 向上取整
 
 ```js
-console.log(Math.ceil(1.1));
-console.log(Math.ceil(1.5));
-console.log(Math.ceil(1.9));
+console.log(Math.ceil(1.1))
+console.log(Math.ceil(1.5))
+console.log(Math.ceil(1.9))
 
 // 2
 ```
@@ -33,9 +33,9 @@ console.log(Math.ceil(1.9));
 向下取整
 
 ```js
-console.log(Math.floor(1.1));
-console.log(Math.floor(1.5));
-console.log(Math.floor(1.9));
+console.log(Math.floor(1.1))
+console.log(Math.floor(1.5))
+console.log(Math.floor(1.9))
 
 // 1
 ```
