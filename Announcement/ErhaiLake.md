@@ -1,22 +1,65 @@
-# 洱海之畔的逼逼赖赖
+<!-- 顶部动图 -->
+<!-- https://github.com/kyechan99/capsule-render -->
+<p align="center">
+    <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&&section=header&text=HI%20THERE&fontSize=90&fontAlign=50&fontAlignY=30&desc=I%20am%20Erhai_lake!&descAlign=50&descSize=30&descAlignY=60&animation=twinkling" />
+</p>
 
-大家好,我是洱海文档的负责人,也是主要编写者,你看到的几乎所有文档,都是我一手编写的.
+<!-- 打字机动图 -->
+<!-- https://github.com/DenverCoder1/readme-typing-svg -->
+<p align="center">
+    <img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=25&pause=1000&center=true&vCenter=true&random=false&width=600&lines=Welcome+to+my+Document!" />
+</p>
 
-## 一来就道歉
+<p align="center">
+    <!-- 数据概览 -->
+    <!-- https://github.com/anuraghazra/github-readme-stats -->
+    <img align="center" width="400" src="https://github-readme-stats.vercel.app/api?username=Erhai-lake&theme=transparent&show_icons=true&hide_border=true&show=reviews&hide_title=true&hide=contribs" />
+    <!-- 连续贡献数据记录 -->
+    <!-- https://github.com/DenverCoder1/github-readme-streak-stats -->
+    <img align="center" width="400" src="https://streak-stats.demolab.com?user=Erhai-lake&theme=transparent&date_format=%5BY.%5Dn.j&hide_border=true" />
+    <br/>
+    <!-- 贡献图 -->
+    <!-- https://github.com/Ashutosh00710/github-readme-activity-graph -->
+    <img width="800" src="https://github-readme-activity-graph.vercel.app/graph?username=Erhai-lake&theme=github-compact&hide_border=true&area=true&custom_title=Contribution%20Graph" />
+    <br/>
+    <!-- 代码编写总时长 -->
+    <!-- https://github.com/anuraghazra/github-readme-stats -->
+    <img align="center" src="https://github-readme-stats.vercel.app/api/wakatime?username=Erhai_lake&theme=transparent&hide_border=true&layout=compact&langs_count=22" />
+    <!-- 项目语言比例 -->
+    <!-- https://github.com/anuraghazra/github-readme-stats -->
+    <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Erhai-lake&theme=transparent&hide_border=true&layout=donut-vertical&langs_count=6" />
+    <br/>
+    <!-- 技术栈图标展示 -->
+    <!-- https://github.com/tandpfun/skill-icons -->
+    <img align="center" src="https://skillicons.dev/icons?i=html,css,js,php,mysql,py,java,md,git,androidstudio&theme=light" />
+</p>
 
-是的,我一上来就先给大伙道个歉,文档中可能会有些没有发现的错别字,或者文档一开始就写错了,十分抱歉.
+<!-- https://github.com/badges/shields -->
+<p align="center">
+    <!-- GitHub -->
+    <a href="https://github.com/Erhai-lake">
+        <img src="https://img.shields.io/badge/GitHub-Erhai_lake-blue?logo=github" />
+    </a>
+    <!-- Bilibili -->
+    <a href="https://space.bilibili.com/497311101">
+        <img src="https://img.shields.io/badge/哔哩哔哩-洱海之畔-pink?logo=bilibili" />
+    </a>
+    <!-- QQ -->
+    <a href="http://wpa.qq.com/msgrd?v=3&uin=3442183040&site=qq&menu=yes">
+        <img src="https://img.shields.io/badge/QQ-3442183040-green?logo=tencentqq" />
+    </a>
+    <!-- 访问统计小徽章 -->
+    <!-- https://github.com/antonkomarev/github-profile-views-counter -->
+    <img src="https://komarev.com/ghpvc/?username=Erhai-lake&abbreviated=true&color=yellow" />
+</p>
 
-> Ps: 不知道是我体弱病虚经常进医院,还是什么奇奇怪怪的缘故,我电脑或手机的输入法打`yy`第一个永远是医院,导致打一些**一样**,**应用**,**用于**,**永远**等名词时,会打成医院,最悲惨的是我还没发现,真的真的十分抱歉(我绝对没有在故意卖惨)
+<!-- 提交贪吃蛇 -->
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Erhai-lake/Erhai-lake/output/github-contribution-grid-snake.svg">
+</p>
 
-当然如有发现,还请联系我修正.
-
-## 二来画饼挖坑
-
-作为主要编写者,我非常高兴能够与大家分享我们的和识,和学习上的一些心得.
-
-我们会不断完善文档,编写更多优质教程的,可以给大伙看看我的计划:
-
-![2-1](assets/2-1.png)
-
-我当然是不希望我的计划赶不上变化的,希望大家能支持我们.如果您有任何建议或意见,随时都可以与我们联系.感谢您对洱海文档网站的关注!
-
+<!-- 底部动图 -->
+<!-- https://github.com/kyechan99/capsule-render -->
+<p align="center">
+    <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&&section=footer&text=THE%20END&fontSize=90&fontAlign=50&fontAlignY=70&desc=Hope%20your%20program%20is%20bug-free!&descAlign=50&descSize=30&descAlignY=40&animation=twinkling" />
+</p>
