@@ -12,13 +12,13 @@ flowchart TD
 	Win --> screen
 ```
 
-**window**对象是一个全局对象,也可以说是**JavaScript**中的顶级对象
+window对象是一个全局对象,也可以说是JavaScript中的顶级对象
 
-像`document`,`alert()`,`console.log()`这些都是**window**的属性,基本**BOM**的属性和方法都是**window**的
+像`document`,`alert()`,`console.log()`这些都是window的属性,基本BOM的属性和方法都是window的
 
-所有通过`var`定义在全局作用域中的变量,函数都会变成**window**对象的属性和方法
+所有通过`var`定义在全局作用域中的变量,函数都会变成window对象的属性和方法
 
-**window**对象下的属性和方法调用的时候可以省略**window**
+window对象下的属性和方法调用的时候可以省略window
 
 > [!note]
 >

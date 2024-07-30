@@ -135,5 +135,9 @@ window.$docsify = {
         minimumScale: 1,
         maximumScale: 5,
         zoomPannel: false
+    },
+    // 阅读进度条
+    progress: {
+        position: "bottom"
     }
 }
