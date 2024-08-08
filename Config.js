@@ -22,6 +22,36 @@ window.$docsify = {
                 showRandomAnnouncement('announce-right', 10000)
             });
         },
+        // 404自动跳转到前言.md
+        function (hook, vm) {
+            hook.beforeEach(function (html) {
+                if (/404/.test(html)) {
+                    let Path = vm.route.file
+                    let Parts = Path.split('/').filter(Path => Path)
+                    function CheckAndRedirect(i) {
+                        if (i < 0) {
+                            window.location.href = '/';
+                            return;
+                        }
+                        let BaseRoute = Parts.slice(0, i + 1).join('/')
+                        fetch(`/${BaseRoute}/前言.md`)
+                            .then(response => {
+                                if (response.ok) {
+                                    window.location.href = `/#/${BaseRoute}/前言.md`;
+                                } else {
+                                    CheckAndRedirect(i - 1)
+                                }
+                            })
+                            .catch(error => {
+                                console.error('检查页面存在时出错:', error);
+                                CheckAndRedirect(i - 1)
+                            });
+                    }
+                    CheckAndRedirect(Parts.length - 2);
+                }
+                return html
+            });
+        }
     ],
     Edit: {
         GitHub: 'Erhai-lake/elake-docs',
