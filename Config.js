@@ -111,7 +111,7 @@ window.$docsify = {
         }
     },
     // 广告
-    ads: [
+    ADS: [
         // 雨云广告
         // {
         //     img: 'assets/ad1.png',
