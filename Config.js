@@ -126,7 +126,7 @@ window.$docsify = {
     toc: {
         scope: '.markdown-section',
         headings: 'h2, h3, h4, h5, h6',
-        title: '　'
+        title: ''
     },
     // GitHub贡献者
     contributors: {
