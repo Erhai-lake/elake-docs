@@ -35,15 +35,15 @@ Android和IOS都有
     const DIV = document.querySelector('div')
     // 手指触摸到一个元素时触发
     DIV.addEventListener('touchstart', () => {
-        console.log('摸到我了');
+        console.log('摸到我了')
     })
     // 手指在一个元素上滑动时触发
     DIV.addEventListener('touchmove', () => {
-        console.log('滑丫滑~');
+        console.log('滑丫滑~')
     })
     // 手指从一个元素上移开时触发
     DIV.addEventListener('touchend', () => {
-        console.log('不摸了?');
+        console.log('不摸了?')
     })
 </script>
 ```

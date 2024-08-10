@@ -28,16 +28,16 @@ switch (数据) {
 ```js
 switch (1) {
   case 1:
-    console.log("输入的是1");
+    console.log("输入的是1")
     break
   case 2:
-    console.log("输入的是2");
+    console.log("输入的是2")
     break
   case 3:
-    console.log("输入的是3");
+    console.log("输入的是3")
     break
   default:
-    console.log("没有对应的值");
+    console.log("没有对应的值")
     break
 }
 // 输入的是1
@@ -48,13 +48,13 @@ switch (1) {
 ```js
 switch (1) {
   case 1:
-    console.log("输入的是1");
+    console.log("输入的是1")
   case 2:
-    console.log("输入的是2");
+    console.log("输入的是2")
   case 3:
-    console.log("输入的是3");
+    console.log("输入的是3")
   default:
-    console.log("没有对应的值");
+    console.log("没有对应的值")
 }
 // 输入的是1
 // 输入的是2

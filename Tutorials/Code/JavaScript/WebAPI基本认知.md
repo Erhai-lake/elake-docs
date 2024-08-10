@@ -87,8 +87,8 @@ DOM对象: 浏览器根据html便签生成的**JS对象**
     <div>Test</div>
     <script>
         const DIV = document.querySelector('div')
-        console.log(DIV);
-        console.log(typeof DIV);
+        console.log(DIV)
+        console.log(typeof DIV)
         // object
     </script>
 </body>
