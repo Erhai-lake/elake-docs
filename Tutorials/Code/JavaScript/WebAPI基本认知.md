@@ -86,9 +86,9 @@ DOM对象: 浏览器根据html便签生成的**JS对象**
 <body>
     <div>Test</div>
     <script>
-        const DIV = document.querySelector('div')
-        console.log(DIV)
-        console.log(typeof DIV)
+        const Div = document.querySelector('div')
+        console.log(Div)
+        console.log(typeof Div)
         // object
     </script>
 </body>
@@ -96,7 +96,7 @@ DOM对象: 浏览器根据html便签生成的**JS对象**
 </html>
 ```
 
-展开在控制台输出的`DIV`,可以看见里面有很多的属性
+展开在控制台输出的`Div`,可以看见里面有很多的属性
 
 ![26-1](assets/26-1.png)
 

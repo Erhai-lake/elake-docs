@@ -21,17 +21,17 @@ document.querySelector('css选择器')
     <li>Test5</li>
 </ul>
 <script>
-    const DIV1 = document.querySelector('div')
-    console.log(DIV1)
-    console.log(DIV1.innerHTML)
+    const Div1 = document.querySelector('div')
+    console.log(Div1)
+    console.log(Div1.innerHTML)
     // abc
-    const DIV2 = document.querySelector('.Test')
-    console.log(DIV2)
-    console.log(DIV2.innerHTML)
+    const Div2 = document.querySelector('.Test')
+    console.log(Div2)
+    console.log(Div2.innerHTML)
     // 123
-    const LI = document.querySelector('ul li:first-child')
-    console.log(LI)
-    console.log(LI.innerHTML)
+    const Li = document.querySelector('ul li:first-child')
+    console.log(Li)
+    console.log(Li.innerHTML)
     // Test1
 </script>
 ```
@@ -53,9 +53,9 @@ document.querySelectorAll('css选择器')
     <li>Test5</li>
 </ul>
 <script>
-    const LI = document.querySelectorAll('ul li')
-    console.log(LI)
-    console.log(LI[0 ].innerHTML)
+    const Li = document.querySelectorAll('ul li')
+    console.log(Li)
+    console.log(Li[0].innerHTML)
     // Test1
 </script>
 ```

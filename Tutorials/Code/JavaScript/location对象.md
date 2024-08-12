@@ -12,8 +12,8 @@ location的数据类型是对象,他拆分并保存了URL地址的各个组成�
 <div>B站</div>
 <script>
     console.log(location.href)
-    const DIV = document.querySelector('div')
-    DIV.addEventListener('click', () => {
+    const Div = document.querySelector('div')
+    Div.addEventListener('click', () => {
         location.href = 'https://www.bilibili.com'
     })
 </script>
@@ -29,8 +29,8 @@ location的数据类型是对象,他拆分并保存了URL地址的各个组成�
 <div>带参</div>
 <script>
     console.log(location.search)
-    const DIV = document.querySelector('div')
-    DIV.addEventListener('click', () => {
+    const Div = document.querySelector('div')
+    Div.addEventListener('click', () => {
         location.href = 'index.html?a=123&b=456'
     })
 </script>
@@ -50,8 +50,8 @@ location的数据类型是对象,他拆分并保存了URL地址的各个组成�
 <a href="#/C">C</a>
 <div>读取</div>
 <script>
-    const DIV = document.querySelector('div')
-    DIV.addEventListener('click', () => {
+    const Div = document.querySelector('div')
+    Div.addEventListener('click', () => {
     	console.log(location.hash)
 	})
 </script>
@@ -75,13 +75,13 @@ location的数据类型是对象,他拆分并保存了URL地址的各个组成�
 <br>
 <div>强制刷新</div>
 <script>
-    const DIV = document.querySelectorAll('div')
+    const Div = document.querySelectorAll('div')
     // 刷新
-    DIV[0].addEventListener('click', () => {
+    Div[0].addEventListener('click', () => {
         location.reload()
     })
     // 强制刷新
-    DIV[1].addEventListener('click', () => {
+    Div[1].addEventListener('click', () => {
         location.reload(true)
     })
 </script>

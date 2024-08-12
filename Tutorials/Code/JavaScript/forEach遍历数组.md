@@ -23,8 +23,8 @@
 举个例子
 
 ```js
-const TEST = ['小敏', '小王', '张三', '李四', '柒月']
-TEST.forEach((Item, Index) => {
+const Test = ['小敏', '小王', '张三', '李四', '柒月']
+Test.forEach((Item, Index) => {
     console.log(`${Index}: ${Item}`)
 })
 ```
