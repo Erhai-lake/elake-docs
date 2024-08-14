@@ -3,13 +3,7 @@
 BOM(Browser Object Model)是浏览器对象模型
 
 ```mermaid
-flowchart TD
-    Win[window]
-	Win --> navigator
-	Win --> location
-	Win --> DOM(document)
-	Win --> history
-	Win --> screen
+flowchart TD;Win[window];Win --> navigator;Win --> location;Win --> DOM(document);Win --> history;Win --> screen
 ```
 
 window对象是一个全局对象,也可以说是JavaScript中的顶级对象

@@ -49,19 +49,7 @@ DOM(Document Object Model **文档对象模型**)是用来呈现以及与任意*
 ```
 
 ```mermaid
-flowchart TD
-    document --> html
-    html --> hrad
-    hrad --> meta --> charset(charset)
-    hrad --> title1[title] --> Demo{Demo}
-    html --> body
-    body --> p --> 文本{文本}
-    body --> div --> a
-    a --> href(href)
-    a --> title2(title)
-    a --> 官网{官网}
-
-    元素节点[元素节点] --> 属性节点(属性节点) --> 文本节点{文本节点}
+flowchart TD;document --> html;html --> hrad;hrad --> meta --> charset(charset);hrad --> title1[title] --> Demo{Demo};html --> body;body --> p --> 文本{文本};body --> div --> a;a --> href(href);a --> title2(title);a --> 官网{官网};元素节点[元素节点] --> 属性节点(属性节点) --> 文本节点{文本节点}
 ```
 
 ### DOM对象(重要)
