@@ -37,7 +37,7 @@ window.$docsify = {
                         fetch(`/${BaseRoute}/前言.md`)
                             .then(response => {
                                 if (response.ok) {
-                                    window.location.href = `/#/${BaseRoute}/前言.md`;
+                                    window.location.href = `/#/${BaseRoute}/前言`;
                                 } else {
                                     CheckAndRedirect(i - 1)
                                 }
