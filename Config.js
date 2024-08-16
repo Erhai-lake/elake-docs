@@ -26,14 +26,14 @@ window.$docsify = {
         function (hook, vm) {
             hook.beforeEach(function (html) {
                 if (/404/.test(html)) {
-                    let Path = vm.route.file
+                    let Path = (vm.route.file).replace(/\.md$/, '')
                     let Parts = Path.split('/').filter(Path => Path)
                     function CheckAndRedirect(i) {
                         if (i < 0) {
                             window.location.href = '/';
                             return;
                         }
-                        let BaseRoute = Parts.slice(0, i + 1).join('/')
+                        let BaseRoute = Parts.slice(0, i + 2).join('/')
                         fetch(`/${BaseRoute}/前言.md`)
                             .then(response => {
                                 if (response.ok) {
