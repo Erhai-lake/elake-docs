@@ -25,7 +25,7 @@ window.$docsify = {
         // 404自动跳转到前言.md
         function (hook, vm) {
             hook.beforeEach(function (html) {
-                if (/404/.test(html)) {
+                if (/# 404/.test(html)) {
                     let Path = (vm.route.file).replace(/\.md$/, '')
                     let Parts = Path.split('/').filter(Path => Path)
                     function CheckAndRedirect(i) {
