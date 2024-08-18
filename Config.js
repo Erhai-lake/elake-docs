@@ -120,6 +120,11 @@ window.$docsify = {
         {
             img: 'https://www.loliapi.com/acg/',
             href: '/'
+        },
+        // 洱海工作室的京东
+        {
+            img: '/assets/AD2.png',
+            href: 'https://mall.jd.com/index-16240061.html'
         }
     ],
     // 右侧大纲
