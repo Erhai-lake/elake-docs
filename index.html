@@ -32,19 +32,6 @@
             color: #e51f1fb3 !important;
         }
     </style>
-    <!-- 导航栏 -->
-    <link rel="stylesheet" href="/plugins/navbar-fixed.css">
-    <!-- 右侧目录 -->
-    <link rel="stylesheet" href="/plugins/toc.css">
-    <!-- Q&F问答 -->
-    <link rel="stylesheet" href="/plugins/accordion.css">
-    <!-- 现代动画终端窗口 -->
-    <link rel="stylesheet" href="/plugins/termynal.css">
-    <link rel="stylesheet" href="/plugins/custom.css">
-    <!-- LaTeX公式 -->
-    <link rel="stylesheet" href="/plugins/katex.min.css" />
-    <!-- Gif浏览器 -->
-    <link rel="stylesheet" href="/plugins/gifcontrol.css">
 </head>
 
 <body>
@@ -55,47 +42,66 @@
     <!-- 核心 -->
     <script src="/Config.js"></script>
     <script src="/docsify.min.js"></script>
-    <script src="/plugins/Elake/Title.js"></script>
     <!-- 插件 -->
-    <!-- 外链脚本 -->
-    <script src="/plugins/external-script.min.js"></script>
-    <!-- 搜索 -->
-    <script src="/plugins/search.min.js"></script>
-    <!-- 图片缩放 -->
-    <script src="/plugins/zoom-image.min.js"></script>
-    <!-- 复制到剪贴板 -->
-    <script src="/plugins/docsify-copy-code.min.js"></script>
-    <!-- 分页导航 -->
-    <script src="/plugins/docsify-pagination.min.js"></script>
-    <!-- 选项卡 -->
-    <script src="/plugins/docsify-tabs.js"></script>
-    <!-- 警报框 -->
-    <script src="/plugins/docsify-plugin-flexible-alerts.min.js"></script>
+    <!-- 标题 -->
+    <script src="/plugins/Elake/Title.js"></script>
     <!-- 广告 -->
     <script src="/plugins/Elake/ADS.js"></script>
+    <!-- 阅读进度条 -->
+    <script src="/plugins/Elake/Progress.js"></script>
+    <!-- 导航栏 -->
+    <!-- https://github.com/LIGMATV/docsify-navbar-fixed -->
+    <link rel="stylesheet" href="/plugins/navbar-fixed.css">
+    <!-- 外链脚本 -->
+    <!-- https://docsify.js.org/#/zh-cn/plugins?id=%e5%a4%96%e9%93%be%e8%84%9a%e6%9c%ac-external-script -->
+    <script src="/plugins/external-script.min.js"></script>
+    <!-- 搜索 -->
+    <!-- https://docsify.js.org/#/zh-cn/plugins?id=%e5%85%a8%e6%96%87%e6%90%9c%e7%b4%a2-search -->
+    <script src="/plugins/search.min.js"></script>
+    <!-- 图片缩放 -->
+    <!-- https://docsify.js.org/#/zh-cn/plugins?id=%e5%9b%be%e7%89%87%e7%bc%a9%e6%94%be-zoom-image -->
+    <script src="/plugins/zoom-image.min.js"></script>
+    <!-- 复制到剪贴板 -->
+    <!-- https://github.com/jperasmus/docsify-copy-code -->
+    <script src="/plugins/docsify-copy-code.min.js"></script>
+    <!-- 分页导航 -->
+    <!-- https://github.com/imyelo/docsify-pagination -->
+    <script src="/plugins/docsify-pagination.min.js"></script>
+    <!-- 选项卡 -->
+    <!-- https://jhildenbiddle.github.io/docsify-tabs/ -->
+    <script src="/plugins/docsify-tabs.js"></script>
+    <!-- 警报框 -->
+    <!-- https://github.com/fzankl/docsify-plugin-flexible-alerts -->
+    <script src="/plugins/docsify-plugin-flexible-alerts.min.js"></script>
     <!-- 回到顶部 -->
     <script src="/plugins/docsify-backTop.min.js"></script>
     <!-- 右侧目录 -->
+    <!-- https://github.com/mrpotatoes/docsify-toc -->
     <script src="/plugins/toc.js"></script>
-    <!-- Q&F问答 -->
-    <script src="/plugins/accordion.js"></script>
+    <link rel="stylesheet" href="/plugins/toc.css">
     <!-- 现代动画终端窗口 -->
+    <!-- https://github.com/sxin0/docsify-termynal -->
     <script src="/plugins/termynal.js"></script>
     <script src="/plugins/custom.js"></script>
+    <link rel="stylesheet" href="/plugins/termynal.css">
+    <link rel="stylesheet" href="/plugins/custom.css">
     <!-- GitHub贡献者 -->
     <script src="/plugins/contributors.js"></script>
     <!-- 字数统计 -->
+    <!-- https://github.com/827652549/docsify-count -->
     <script src="/plugins/countable.js"></script>
     <!-- 加载外部MD -->
+    <!-- https://github.com/JerryC8080/docsify-remote-markdown -->
     <script src="/plugins/docsify-remote-markdown.min.js"></script>
     <!-- 代码高亮工具语法支持 -->
+    <!-- https://prismjs.com/ -->
     <script src="/plugins/prism-java.min.js"></script>
     <script src="/plugins/prism-json.min.js"></script>
     <script src="/plugins/prism-json5.min.js"></script>
     <script src="/plugins/prism-bash.js"></script>
-    <!-- mermaid图表缩放D3前置 -->
-    <script src="/plugins/d3@7.js"></script>
     <!-- mermaid图表 -->
+    <!-- https://github.com/Leward/mermaid-docsify -->
+    <script src="/plugins/d3@7.js"></script>
     <script type="module">
         import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
         mermaid.initialize({ startOnLoad: true });
@@ -103,15 +109,18 @@
     </script>
     <script src="/plugins/docsify-mermaid.js"></script>
     <!-- mermaid图表缩放 -->
+    <!-- https://github.com/corentinleberre/docsify-mermaid-zoom -->
     <script src="/plugins/docsify-mermaid-zoom.js"></script>
     <!-- LaTeX公式 -->
+    <!-- https://github.com/upupming/docsify-katex -->
     <script src="/plugins/katex.min.js"></script>
     <script src="/plugins/marked@4.js"></script>
     <script src="/plugins/docsify-katex.js"></script>
-    <!-- 阅读进度条 -->
-    <script src="/plugins/Elake/Progress.js"></script>
+    <link rel="stylesheet" href="/plugins/katex.min.css" />
     <!-- Gif浏览器 -->
+    <!-- https://gbodigital.github.io/docsify-gifcontrol/ -->
     <script src="/plugins/gifcontrol.js"></script>
+    <link rel="stylesheet" href="/plugins/gifcontrol.css">
 </body>
 
 </html>
