@@ -35,8 +35,60 @@ flowchart TD
 
 ## 在IDEA创建project
 
+![3-6](assets/3-6.png)
+
+![3-7](assets/3-7.png)
+
+![3-8](assets/3-8.png)
+
+这样一个全新的项目就诞生了
+
 ## 在IDEA创建moduke
+
+![6-1](assets/6-1.png)
+
+![6-2](assets/6-2.png)
+
+![6-3](assets/6-3.png)
+
+这样一个新的模块就诞生了
 
 ## 在IDEA创建package
 
+![6-4](assets/6-4.png)
+
+![6-5](assets/6-5.png)
+
+> [!caution]
+>
+> 包名不是单单一个名字这么简单,一般是倒过来的公司域名和技术名,全部小写,例如:
+>
+> `top.elake.hello`
+
+输入完后回车
+
+![6-6](assets/6-6.png)
+
+这样一个新的包就诞生了
+
+> [!caution]
+>
+> 如果你的包不是像我这个的,而是这样的
+>
+> ![6-7](assets/6-7.png)
+>
+> 可以按着下面的方法设置,看个人喜好
+>
+> ![6-8](assets/6-8.png)
+
 ## 在IDEA创建class
+
+![6-9](assets/6-9.png)
+
+![6-10](assets/6-10.png)
+
+输入完名称后回车
+
+![6-11](assets/6-11.png)
+
+这样一个新的类就诞生了
