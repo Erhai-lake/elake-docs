@@ -55,4 +55,8 @@ flowchart TD
 
 ## 在IDEA创建package
 
+![6-4](assets/6-4.png)
+
 ## 在IDEA创建class
+
+![6-9](assets/6-9.png)
