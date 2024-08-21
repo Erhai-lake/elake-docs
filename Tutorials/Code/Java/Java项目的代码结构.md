@@ -35,8 +35,16 @@ flowchart TD
 
 ## 在IDEA创建project
 
+![5-1](assets/5-1.png)
+
 ## 在IDEA创建moduke
+
+![5-2](assest/5-2.png)
 
 ## 在IDEA创建package
 
+![5-3](assets/5-3.png)
+
 ## 在IDEA创建class
+
+![5-4](assets/5-4.png)
