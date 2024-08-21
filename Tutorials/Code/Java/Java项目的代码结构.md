@@ -35,16 +35,24 @@ flowchart TD
 
 ## 在IDEA创建project
 
-![5-1](assets/5-1.png)
+![3-6](assets/3-6.png)
+
+![3-7](assets/3-7.png)
+
+![3-8](assets/3-8.png)
+
+这样一个全新的项目就诞生了
 
 ## 在IDEA创建moduke
 
-![5-2](assest/5-2.png)
+![6-1](assets/6-1.png)
+
+![6-2](assets/6-2.png)
+
+![6-3](assets/6-3.png)
+
+这样一个新的模块就诞生了
 
 ## 在IDEA创建package
 
-![5-3](assets/5-3.png)
-
 ## 在IDEA创建class
-
-![5-4](assets/5-4.png)
