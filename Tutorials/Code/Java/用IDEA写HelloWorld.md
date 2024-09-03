@@ -20,6 +20,35 @@ public static void main(String[] args) {
 
 等待程序构建完成后,就可以在弹出的运行窗口中看见`Hello World`了
 
-> 第一次运行可能会很慢,请耐心等待[取决于你的电脑性能(人话:"觉得太慢就升级你的电脑,尤其是CPU")]
+> [!tip]
+>
+> 第一次运行可能会很慢,请耐心等待
+>
+> Java项目编译时,编译速度和可编译项目的大小,取决于你电脑的CPU和RAM
+>
+> 人话:如果编译时很慢,或者编译大型项目时奔溃,那么你该升级你的电脑配置了
 
 ![7-4](assets/7-4.png)
+
+## 代码解析
+
+每个项目中,通常只有一个`main`入口点,入口点的代码为:
+
+```java
+public static void main(String[] args) {
+}
+```
+
+1. `public`: 访问修饰符
+2. `static`: 关键词
+3. `void`: 返回类型,`void`的意思就是空,入口点的目的是启动程序,不会有返回结果
+4. `main`: 方法名
+5. `String[] args`: 参数列表
+
+剩下的`System.out.println("Hello World");`就是输出语句了
+
+> [!warning]
+>
+> 在Java没断代码的结尾都要加`;`
+
+详细的会在之后的文档中写到~
