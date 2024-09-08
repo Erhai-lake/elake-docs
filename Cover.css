@@ -41,6 +41,11 @@ section.cover ul {
     display: flex;
 }
 
+section.cover .cover-main > p:last-child a:nth-last-child(2) {
+    background-color: var(--theme-color, #42b983);
+    color: #fff;
+}
+
 @media only screen and (min-width: 960px) {
     section.cover .cover-main {
         margin: 0 72px;
