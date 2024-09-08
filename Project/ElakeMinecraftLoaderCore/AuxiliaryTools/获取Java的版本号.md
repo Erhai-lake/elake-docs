@@ -16,7 +16,7 @@
 ```C#
 private void AuxiliaryTools()
 {
-    Console.WriteLine(ElakeMinecraftLoaderCore.AuxiliaryTools.GetJavaVersion("D:/java/JDK21"));
+    Console.WriteLine(ElakeAuxiliaryTools.GetJavaVersion("D:/java/JDK21"));
 }
 ```
 

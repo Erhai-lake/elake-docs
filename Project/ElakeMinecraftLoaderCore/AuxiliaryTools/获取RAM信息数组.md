@@ -15,7 +15,7 @@
 ```C#
 private void AuxiliaryTools()
 {
-    string[] RAMInfos = ElakeMinecraftLoaderCore.AuxiliaryTools.GetRAMInfo();
+    string[] RAMInfos = ElakeAuxiliaryTools.GetRAMInfo();
     foreach (string RAMInfo in RAMInfos)
     {
         Console.WriteLine(RAMInfo);

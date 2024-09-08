@@ -15,7 +15,7 @@
 ```C#
 private void AuxiliaryTools()
 {
-    string[] GpuInfos = ElakeMinecraftLoaderCore.AuxiliaryTools.GetGpuInfo();
+    string[] GpuInfos = ElakeAuxiliaryTools.GetGpuInfo();
     foreach (string GpuInfo in GpuInfos)
     {
         Console.WriteLine(GpuInfo);

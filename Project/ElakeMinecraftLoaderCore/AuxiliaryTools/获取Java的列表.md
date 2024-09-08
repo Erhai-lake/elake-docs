@@ -15,7 +15,7 @@
 ```C#
 private async void AuxiliaryTools()
 {
-    var Java = await ElakeMinecraftLoaderCore.AuxiliaryTools.GetJavaList();
+    var Java = await ElakeAuxiliaryTools.GetJavaList();
     if (Java.Count == 0)
     {
         Console.WriteLine("没有检测到Java");

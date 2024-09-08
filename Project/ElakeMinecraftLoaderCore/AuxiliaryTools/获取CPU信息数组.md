@@ -15,7 +15,7 @@
 ```C#
 private void AuxiliaryTools()
 {
-    string[] CpuInfos = ElakeMinecraftLoaderCore.AuxiliaryTools.GetCpuInfo();
+    string[] CpuInfos = ElakeAuxiliaryTools.GetCpuInfo();
     foreach (string CpuInfo in CpuInfos)
     {
         Console.WriteLine(CpuInfo);

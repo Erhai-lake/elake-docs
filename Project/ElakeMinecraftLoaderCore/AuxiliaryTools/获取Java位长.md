@@ -16,7 +16,7 @@
 ```C#
 private void AuxiliaryTools()
 {
-    Console.WriteLine(ElakeMinecraftLoaderCore.AuxiliaryTools.GetJavaBitness("D:/java/JDK21"));
+    Console.WriteLine(ElakeAuxiliaryTools.GetJavaBitness("D:/java/JDK21"));
 }
 ```
 
