@@ -9,6 +9,10 @@
 
 ## 例子
 
+<!-- tabs:start -->
+
+<!-- tab:代码 -->
+
 ```C#
 private void AuxiliaryTools()
 {
@@ -16,5 +20,10 @@ private void AuxiliaryTools()
 }
 ```
 
-![2-1](assets/2-1.png)
+<!-- tab:返回 -->
 
+```
+64
+```
+
+<!-- tabs:end -->

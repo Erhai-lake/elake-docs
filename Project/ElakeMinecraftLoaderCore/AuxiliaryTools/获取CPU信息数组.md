@@ -8,6 +8,10 @@
 
 ## 例子
 
+<!-- tabs:start -->
+
+<!-- tab:代码 -->
+
 ```C#
 private void AuxiliaryTools()
 {
@@ -19,5 +23,10 @@ private void AuxiliaryTools()
 }
 ```
 
-![4-1](assets/4-1.png)
+<!-- tab:返回 -->
 
+```
+GenuineIntel Intel(R)Core(TM)i7-10875H CPU @ 2.30GHz
+```
+
+<!-- tabs:end -->

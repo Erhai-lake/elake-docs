@@ -8,6 +8,10 @@
 
 ## 例子
 
+<!-- tabs:start -->
+
+<!-- tab:代码 -->
+
 ```C#
 private void AuxiliaryTools()
 {
@@ -19,5 +23,11 @@ private void AuxiliaryTools()
 }
 ```
 
-![5-1](assets/5-1.png)
+<!-- tab:返回 -->
 
+```
+NVIDIA GeForce RTX 2060 4GB
+Intel(R) UHD Graphics 1GB
+```
+
+<!-- tabs:end -->

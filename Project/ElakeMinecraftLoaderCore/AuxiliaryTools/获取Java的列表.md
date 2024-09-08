@@ -8,6 +8,10 @@
 
 ## 例子
 
+<!-- tabs:start -->
+
+<!-- tab:代码 -->
+
 ```C#
 private async void AuxiliaryTools()
 {
@@ -29,5 +33,24 @@ private async void AuxiliaryTools()
 }
 ```
 
-![3-1](assets/3-1.png)
+<!-- tab:返回 -->
 
+```
+版本号: 21.0.4
+位长: 64
+路径: D:\Java\JDK21
+
+版本号: 1.8.0-202
+位长: 64
+路径: DD:\Java\JDK8
+
+版本号: 1.8.0202
+位长: 64
+路径: D:\Java\JDk8\jre
+
+版本号: 1.8.0202
+位长: 64
+路径: D:\Java\Jre1.8.0202
+```
+
+<!-- tabs:end -->

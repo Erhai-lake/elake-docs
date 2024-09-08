@@ -8,6 +8,10 @@
 
 ## 例子
 
+<!-- tabs:start -->
+
+<!-- tab:代码 -->
+
 ```C#
 private void AuxiliaryTools()
 {
@@ -19,5 +23,10 @@ private void AuxiliaryTools()
 }
 ```
 
-![6-1](assets/6-1.png)
+<!-- tab:返回 -->
 
+```
+Crucial CT16G4SFRA32A.C8FF 16GB 3200MHz
+```
+
+<!-- tabs:end -->
