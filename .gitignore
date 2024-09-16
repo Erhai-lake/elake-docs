@@ -1,9 +1,0 @@
-# 依赖文件
-node_modules
-pnpm-lock.yaml
-
-# 构建的文件
-build
-
-# 生成的文档
-.docusaurus
