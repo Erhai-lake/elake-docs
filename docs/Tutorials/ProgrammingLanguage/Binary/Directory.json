@@ -1,0 +1,11 @@
+[
+    {
+        "type": "category",
+        "label": "Binary",
+        "items": [
+            "Tutorials/ProgrammingLanguage/Binary/Binary",
+            "Tutorials/ProgrammingLanguage/Binary/ConversionBetweenBinaryAndDecimal",
+            "Tutorials/ProgrammingLanguage/Binary/End"
+        ]
+    }
+]

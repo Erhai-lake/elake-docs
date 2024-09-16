@@ -1,0 +1,14 @@
+[
+    {
+        "type": "category",
+        "label": "洱海文档",
+        "items": [
+            "ElakeDocs/UserTerms",
+            "ElakeDocs/Method",
+            "ElakeDocs/Specification",
+            "Components/Components",
+            "ElakeDocs/ErhaiLake",
+            "ElakeDocs/QiMonth"
+        ]
+    }
+]

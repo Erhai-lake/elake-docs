@@ -1,0 +1,17 @@
+[
+    {
+        "type": "category",
+        "label": "RegularExpression",
+        "items": [
+            "Tutorials/ProgrammingLanguage/RegularExpression/RegularExpression",
+            "Tutorials/ProgrammingLanguage/RegularExpression/FuzzyMatching",
+            "Tutorials/ProgrammingLanguage/RegularExpression/PositionMatching",
+            "Tutorials/ProgrammingLanguage/RegularExpression/TheRoleOfBrackets",
+            "Tutorials/ProgrammingLanguage/RegularExpression/PrincipleOfBacktracking",
+            "Tutorials/ProgrammingLanguage/RegularExpression/Split",
+            "Tutorials/ProgrammingLanguage/RegularExpression/Build",
+            "Tutorials/ProgrammingLanguage/RegularExpression/Modifier",
+            "Tutorials/ProgrammingLanguage/RegularExpression/End"
+        ]
+    }
+]

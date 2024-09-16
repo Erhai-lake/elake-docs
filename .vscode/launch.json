@@ -1,0 +1,41 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "热启动",
+            "runtimeExecutable": "pnpm",
+            "runtimeArgs": ["run", "start"],
+            "skipFiles": ["<node_internals>/**"],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "构建",
+            "runtimeExecutable": "pnpm",
+            "runtimeArgs": ["run", "build"],
+            "skipFiles": ["<node_internals>/**"],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "启动本地服务器",
+            "runtimeExecutable": "pnpm",
+            "runtimeArgs": ["run", "serve"],
+            "skipFiles": ["<node_internals>/**"],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "清除缓存",
+            "runtimeExecutable": "pnpm",
+            "runtimeArgs": ["run", "clear"],
+            "skipFiles": ["<node_internals>/**"],
+            "console": "integratedTerminal"
+        }
+    ]
+}

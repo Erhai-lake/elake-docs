@@ -1,0 +1,15 @@
+[
+    {
+        "type": "category",
+        "label": "Project",
+        "link": {
+            "type": "generated-index",
+            "title": "项目文档",
+            "description": "这里是存放项目文档的地方"
+        },
+        "items": [
+            "Project/ElakeApi/ElakeApi",
+            "Project/ElakeMinecraftLoaderCore/ElakeMinecraftLoaderCore"
+        ]
+    }
+]

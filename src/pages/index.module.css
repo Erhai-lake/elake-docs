@@ -1,0 +1,152 @@
+a:hover {
+    text-decoration: none;
+}
+
+.Main {
+    padding: 100px;
+    height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+}
+
+.Title {
+    margin: 0;
+    color: var(--ifm-color-primary);
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.Tagline {
+    margin: 0;
+    color: #34495e;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+[data-theme='dark'] .Tagline {
+    color: #dfe4e9;
+}
+
+.Ul {
+    padding: 0;
+    margin: 10px 0;
+    list-style: none;
+    font-size: 24px;
+}
+
+.Ul li {
+    text-align: center;
+}
+
+@keyframes Rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.LogoRotate {
+    animation: Rotate 1s linear infinite;
+}
+
+.Logo {
+    position: relative;
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+    filter: drop-shadow(5px 5px 100px rgba(255, 255, 255, 0.3));
+    cursor: pointer;
+}
+
+.Logo div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: linear-gradient(136deg,
+            var(--Erhai_lake) 0%,
+            var(--Erhai_lake) 40%,
+            var(--XiaoLian) 40%,
+            var(--XiaoLian) 60%,
+            var(--Qi_Month) 60%,
+            var(--Qi_Month) 100%);
+    filter: blur(75px);
+}
+
+.Logo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ButtonDiv {
+    padding: 0;
+    margin: 30px 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.Button {
+    padding: 12px 24px;
+    margin: 5px 8px;
+    letter-spacing: -1px;
+    background-color: #ebebef;
+    border-radius: 50px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.TipButton {
+    padding: 12px 24px;
+    margin: 5px 8px;
+    letter-spacing: -1px;
+    background-color: var(--ifm-color-primary);
+    border-radius: 50px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.TipButton:hover {
+    color: #000;
+    transition: all 1s
+}
+
+@media only screen and (min-width: 960px) {
+    .Title {
+        font-size: 56px;
+        text-align: left;
+    }
+
+    .Tagline {
+        font-size: 55px;
+        text-align: left;
+    }
+
+    .Ul li {
+        text-align: left;
+    }
+
+    .ButtonDiv {
+        display: block;
+    }
+
+    .Logo {
+        position: absolute;
+        left: 75%;
+        width: 270px;
+        height: 270px;
+    }
+}

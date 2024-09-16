@@ -1,0 +1,20 @@
+[
+    {
+        "type": "category",
+        "label": "Java",
+        "items": [
+            "Tutorials/ProgrammingLanguage/Java/Java",
+            "Tutorials/ProgrammingLanguage/Java/Environment",
+            "Tutorials/ProgrammingLanguage/Java/Editor",
+            "Tutorials/ProgrammingLanguage/Java/FirstProgram",
+            "Tutorials/ProgrammingLanguage/Java/HowToUnderstandJavaErrors",
+            "Tutorials/ProgrammingLanguage/Java/CodeStructureOfJavaProjects",
+            "Tutorials/ProgrammingLanguage/Java/WriteHelloWorldWithIdea",
+            "Tutorials/ProgrammingLanguage/Java/Annotation",
+            "Tutorials/ProgrammingLanguage/Java/FunctionalUnits",
+            "Tutorials/ProgrammingLanguage/Java/Literals",
+            "Tutorials/ProgrammingLanguage/Java/Variables",
+            "Tutorials/ProgrammingLanguage/Java/Specification"
+        ]
+    }
+]

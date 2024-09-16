@@ -1,0 +1,14 @@
+[
+    {
+        "type": "category",
+        "label": "组件文档",
+        "items": [
+            "Components/Components",
+            "Components/Tabs",
+            "Components/AlarmBox",
+            "Components/CodeBox",
+            "Components/LaTeX",
+            "Components/Mermaid"
+        ]
+    }
+]
