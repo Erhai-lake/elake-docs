@@ -8,4 +8,12 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-        - run: node -v
+            # 使用 node:20
+            - name: use Node.js 20
+            uses: actions/setup-node@v1
+            with:
+                node-version: 20
+
+            # 输出
+            - name: s
+                run: node -v
