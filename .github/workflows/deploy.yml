@@ -18,6 +18,18 @@ jobs:
         - name: Install pnpm
           run: npm install -g pnpm
 
+         # 安装 Docusaurus 依赖
+        - name: Install Docusaurus dependencies
+          run: pnpm i
+
+        # 清理 Docusaurus 缓存
+        - name: Docusaurus clear
+          run: pnpm run docusaurus clear
+
+        # 构建 Docusaurus 项目
+        - name: Docusaurus build
+          run: pnpm run docusaurus build
+
         # 输出
-        - name: pnpm
-          run: pnpm -v
+        - name: pwd
+          run: pwd
