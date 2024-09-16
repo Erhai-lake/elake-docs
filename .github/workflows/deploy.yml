@@ -20,7 +20,7 @@ jobs:
 
          # 安装 Docusaurus 依赖
         - name: Install Docusaurus dependencies
-          run: pnpm i
+          run: pnpm install
 
         # 清理 Docusaurus 缓存
         - name: Docusaurus clear
