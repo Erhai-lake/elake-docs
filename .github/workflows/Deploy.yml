@@ -4,51 +4,52 @@ on:
     branches:
       - master
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      # 切换分支
+      # 检出代码
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
 
       # 解决子模块所有权问题
       - name: Set safe directory
-        run: git config --global --add safe.directory $(pwd)
-    
-      # 下载 git submodule
-      - uses: srt32/git-actions@v0.0.3
-        with:
-          args: git submodule update --init --recursive
+        run: git config --global --add safe.directory $GITHUB_WORKSPACE
 
-      # 使用 node:20
-      - name: Use Node.js 20
-        uses: actions/setup-node@v1
+      # 初始化子模块
+      - name: Initialize submodules
+        run: git submodule update --init --recursive
+
+      # 设置 Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: '20.x'
 
       # 安装 pnpm
       - name: Install pnpm
-        run: npm install -g pnpm
+        run: npm install -g pnpm@latest
 
-      # 使用 pnpm 安装 Docusaurus 依赖
-      - name: Install Docusaurus dependencies
+      # 安装依赖
+      - name: Install dependencies
         run: pnpm install
 
-      # 清理 Docusaurus 构建目录
-      - name: Docusaurus clear
+      # 清理构建目录
+      - name: Clear Docusaurus build directory
         run: pnpm docusaurus clear
 
       # 构建项目
-      - name: Docusaurus build
+      - name: Build Docusaurus project
         run: pnpm docusaurus build
 
-      # Deploy
-      - name: Deploy
-        uses: easingthemes/ssh-deploy@v2.0.7
+      # 部署到服务器
+      - name: Deploy to server
+        uses: easingthemes/ssh-deploy@v2.1.7
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-avz --delete"
-          SOURCE: "build/"  # Docusaurus 默认构建输出目录
+          SOURCE: "build/" # Docusaurus 默认构建输出目录
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: ${{ secrets.TARGET }}
+          TARGET: ${{ secrets.REMOTE_TARGET }}
+
+      # 其他步骤可以继续添加...
