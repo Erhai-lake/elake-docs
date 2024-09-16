@@ -14,10 +14,10 @@ jobs:
           with:
             node-version: 20
 
-        # 输出
-        - name: node v
-          run: node -v
+        # 安装 pnpm
+        - name: Install pnpm
+          run: npm install -g pnpm
 
         # 输出
-        - name: pwd
-          run: pwd
+        - name: pnpm
+          run: pnpm -v
