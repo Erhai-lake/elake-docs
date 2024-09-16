@@ -1,4 +1,4 @@
-name: deploy blog to aliyun
+name: 将文档推送到服务器
 on:
     push:
         branches:
@@ -8,32 +8,22 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-        # 切换分支
-        - name: Checkout
-          uses: actions/checkout@master
+        - name: 切换分支🀄
+          uses: actions/checkout@v4
 
-        # 使用 node:20
-        - name: Use Node.js 20
+        - name: 使用 node:20🌠
           uses: actions/setup-node@v1
           with:
             node-version: 20
 
-        # 安装 pnpm
-        - name: Install pnpm
+        - name: 安装 pnpm☂
           run: npm install -g pnpm
 
-         # 安装 Docusaurus 依赖
-        - name: Install Docusaurus dependencies
+        - name: 安装 Docusaurus 依赖❄
           run: pnpm install
 
-        # 清理 Docusaurus 缓存
-        - name: Docusaurus clear
+        - name: 清理 Docusaurus 缓存🌀
           run: pnpm run docusaurus clear
 
-        # 构建 Docusaurus 项目
-        - name: Docusaurus build
+        - name: 构建 Docusaurus 项目🚽
           run: pnpm run docusaurus build
-
-        # 输出
-        - name: pwd
-          run: pwd
