@@ -2,7 +2,7 @@ name: 构建文档
 on:
     push:
         branches:
-        - master
+        - build
 
 permissions:
     contents: write
@@ -31,8 +31,8 @@ jobs:
         - name: 构建 Docusaurus 项目🚽
           run: pnpm run docusaurus build
 
-        - name: 同步到分支
+        - name: 同步到分支🚄
           uses: JamesIves/github-pages-deploy-action@v4
           with:
-            branch: build
+            branch: production
             folder: build
