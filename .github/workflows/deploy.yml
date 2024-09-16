@@ -8,6 +8,10 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:
+        # 切换分支
+        - name: Checkout
+          uses: actions/checkout@master
+
         # 使用 node:20
         - name: Use Node.js 20
           uses: actions/setup-node@v1
