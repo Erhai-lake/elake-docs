@@ -17,3 +17,7 @@ jobs:
         # 输出
         - name: node v
           run: node -v
+
+        # 输出
+        - name: pwd
+          run: pwd
