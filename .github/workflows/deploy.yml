@@ -1,8 +1,11 @@
-name: 将文档推送到服务器
+name: 构建文档
 on:
     push:
         branches:
         - master
+
+permissions:
+    contents: write
 
 jobs:
     build:
@@ -27,3 +30,9 @@ jobs:
 
         - name: 构建 Docusaurus 项目🚽
           run: pnpm run docusaurus build
+
+        - name: 同步到分支
+          uses: JamesIves/github-pages-deploy-action@v4
+          with:
+            branch: build
+            folder: build
