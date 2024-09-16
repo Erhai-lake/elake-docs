@@ -41,6 +41,11 @@ jobs:
       - name: Build Docusaurus project
         run: pnpm docusaurus build
 
+      - name: Set SSH password
+        run: echo "$SSH_PASSWORD" | tr -d '\n' > ~/.ssh/password
+        env:
+          SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
+
       # 部署到服务器
       - name: Deploy to server
         uses: easingthemes/ssh-deploy@v2.1.7
