@@ -1,0 +1,11 @@
+name: deploy blog to aliyun
+on:
+    push:
+        branches:
+        - master
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        -run: node -v
