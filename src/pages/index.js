@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import Layout from '@theme/Layout'
 
+import BUGBoom from './BUGBoom'
 import Style from './index.module.css'
 
 let Id = 0
 export default function Home() {
     const { siteConfig } = useDocusaurusContext()
     const [isRotating, setIsRotating] = useState(false)
+    BUGBoom()
     const LogoClick = () => {
         if (Id === 0) {
             Id = 1
