@@ -4,9 +4,9 @@
 
 ## 文档仓库地址
 
-[GitHub](https://github.com/Erhai-lake/elake-docs)
+[GitHub](//github.com/Erhai-lake/elake-docs)
 
-[Gitee](https://gitee.com/erhai-lake/elake-docs)
+[Gitee](//gitee.com/erhai-lake/elake-docs)
 
 ## 运行
 
