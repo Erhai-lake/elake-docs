@@ -16,3 +16,12 @@
 > 请不要使用除`start`,`build`,`serve`,`clear`之外的命令!
 >
 > 如果你使用VS Code请使用运行和调试功能里的启动项,我已经配置好了`launch.json`
+
+## 分支
+
+* `master`: 主分支,用于存放最新的文档
+* `build`: 构建分支,当到一定体积时,将`master`分支合并到`build`分支,构建出静态页面,自动构建并推送到`production`分支
+* `production`: 部署分支,存放构建后的静态页面,用于自动部署到服务器
+
+> [!WARNING]
+> 请不要直接修改`build`和`production`分支!

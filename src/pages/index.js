@@ -44,8 +44,8 @@ export default function Home() {
             <div className={Style.ButtonDiv}>
                 <a className={Style.Button} href='/docs/ElakeDocs/UserTerms'>洱海文档</a>
                 <a className={Style.Button} href='/docs/HowToAskQuestionsTheSmartWay'>提问的智慧</a>
-                <a className={Style.TipButton} href='/docs/category/Project'>项目文档</a>
-                <a className={Style.TipButton} href='/docs/category/Tutorials'>知识库</a>
+                <a className={Style.TipButton} href='/docs/category/project'>项目文档</a>
+                <a className={Style.TipButton} href='/docs/category/tutorials'>知识库</a>
             </div>
         )
     }

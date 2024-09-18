@@ -1,0 +1,38 @@
+name: 构建文档
+on:
+    push:
+        branches:
+        - build
+
+permissions:
+    contents: write
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        - name: 切换分支🀄
+          uses: actions/checkout@v4
+
+        - name: 使用 node:20🌠
+          uses: actions/setup-node@v2
+          with:
+            node-version: 20
+
+        - name: 安装 pnpm☂
+          run: npm install -g pnpm
+
+        - name: 安装 Docusaurus 依赖❄
+          run: pnpm install
+
+        - name: 清理 Docusaurus 缓存🌀
+          run: pnpm run docusaurus clear
+
+        - name: 构建 Docusaurus 项目🚽
+          run: pnpm run docusaurus build
+
+        - name: 同步到分支🚄
+          uses: JamesIves/github-pages-deploy-action@v4
+          with:
+            branch: production
+            folder: build
