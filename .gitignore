@@ -7,3 +7,6 @@ build
 
 # 生成的文档
 .docusaurus
+
+# VS Code配置文件
+.vscode/settings.json
