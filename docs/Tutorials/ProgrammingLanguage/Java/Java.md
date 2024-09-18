@@ -1,6 +1,6 @@
 ---
-id: JavaIntroduction
-title: Java介绍
+id: Java
+title: Java
 ---
 
 > 本文档编写于 2024-08-17
@@ -24,7 +24,7 @@ Java不是刚来的编程世界的新手该学习的语言
 由**Sun Microsystems公司**(现已被**Oracle公司**收购)在1995年发布,Java被设计为具有尽可能少的实现依赖性,这使得Java应用能够在任何支持Java虚拟机(JVM)的设备上运行
 
 :::warning
-普遍认同Java联合创始人之一:詹姆斯`高斯林(James Gosling)为ava之父
+普遍认同Java联合创始人之一:詹姆斯·高斯林(James Gosling)为ava之父
 :::
 
 ## 主要特点
