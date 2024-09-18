@@ -1,6 +1,6 @@
 ---
-id: Java
-title: Java
+id: JavaIntroduction
+title: Java介绍
 ---
 
 > 本文档编写于 2024-08-17

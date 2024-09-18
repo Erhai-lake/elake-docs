@@ -1,5 +1,5 @@
 ---
-id: HowToUnderstandJavaErrors
+id: JavaErrors
 title: 怎么看懂Java的报错
 ---
 

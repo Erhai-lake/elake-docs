@@ -1,5 +1,5 @@
 ---
-id: WriteHelloWorldWithIdea
+id: HelloWorldtoIdea
 title: 用IDEA写HelloWorld
 ---
 

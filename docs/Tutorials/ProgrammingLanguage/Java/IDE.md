@@ -1,5 +1,5 @@
 ---
-id: Editor
+id: IDE
 title: 编辑器
 ---
 

@@ -1,5 +1,5 @@
 ---
-id: CodeStructureOfJavaProjects
+id: JavaProjectStructure
 title: Java项目的代码结构
 ---
 
