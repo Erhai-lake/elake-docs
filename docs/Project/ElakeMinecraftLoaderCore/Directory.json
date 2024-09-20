@@ -63,6 +63,27 @@
                         ]
                     }
                 ]
+            },
+            {
+                "type": "category",
+                "label": "模组类",
+                "items": [
+                    "Project/ElakeMinecraftLoaderCore/ElakeMods/ElakeMods",
+                    {
+                        "type": "category",
+                        "label": "方法",
+                        "items": [
+                            "Project/ElakeMinecraftLoaderCore/ElakeMods/Method/InitializeSearcher"
+                        ]
+                    },
+                    {
+                        "type": "category",
+                        "label": "变量",
+                        "items": [
+                            "Project/ElakeMinecraftLoaderCore/ElakeMods/Variables/CurseforgeAPIKey"
+                        ]
+                    }
+                ]
             }
         ]
     }
