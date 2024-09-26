@@ -20,6 +20,9 @@ const Config = {
     markdown: {
         mermaid: true,
     },
+    plugins: [
+        'plugin-image-zoom'
+    ],
     themes: [
         '@docusaurus/theme-mermaid',
         '@docusaurus/theme-live-codeblock',
@@ -149,6 +152,12 @@ const Config = {
         },
         liveCodeBlock: {
             playgroundPosition: 'bottom'
+        },
+        imageZoom: {
+            selector: '.markdown img',
+            options: {
+                background: '#00000000'
+            }
         }
     }
 }
