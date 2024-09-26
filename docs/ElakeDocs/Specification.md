@@ -3,9 +3,6 @@ id: Specification
 title: 文档编写规范
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 # 文档编写规范
 
 ## 必须的文章元数据

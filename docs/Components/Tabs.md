@@ -3,9 +3,6 @@ id: Tabs
 title: 选项卡
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 # 选项卡
 
 <Tabs>
@@ -24,9 +21,6 @@ import TabItem from '@theme/TabItem'
     </TabItem>
     <TabItem value="Code" label="代码">
         ```md showLineNumbers
-        import Tabs from '@theme/Tabs'
-        import TabItem from '@theme/TabItem'
-
         <Tabs>
             <TabItem value="Item1" label="选项一">
                 选项一

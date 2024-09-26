@@ -36,7 +36,7 @@ Ps:说了这么多,反正只用知道,这两B玩意没任何关系,名字也只�
 
 DOM 操作文档,比如对页面元素进行移动,大小,添加删除等操作
 
-BO 操作浏览器,比如页面弹窗,检测窗口宽度,存储数据到浏览器等等
+BOM 操作浏览器,比如页面弹窗,检测窗口宽度,存储数据到浏览器等等
 
 ```mermaid
 flowchart TD; JS[JavaScript];JS --> |JavaScript语言基础| ECMAScript;JS --> WebAPI[Web APIs];WebAPI --> |页面文档对象模型| DOM;WebAPI --> |浏览器对象模型| BOM

@@ -8,7 +8,8 @@
             "Components/AlarmBox",
             "Components/CodeBox",
             "Components/LaTeX",
-            "Components/Mermaid"
+            "Components/Mermaid",
+            "Components/Test"
         ]
     }
 ]

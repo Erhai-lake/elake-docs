@@ -3,16 +3,12 @@ id: GetVersionList
 title: 获取版本列表
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 # 获取版本列表
 
 |       属性        |                           值                           |
 | :---------------: | :----------------------------------------------------: |
 |      方法名       |                   `GetVersionList()`                   |
 |       描述        |                      获取版本列表                      |
-| 参数 `SourceJson` | 源Json 字符串(默认使用[`VersionJson`](../Variables/VersionJson)) |
 |  参数 `Release`   |          是否获取正式版 布尔值(默认使用true)           |
 |  参数 `Snapshot`  |          是否获取快照版 布尔值(默认使用true)           |
 |    参数 `Old`     |          是否获取远古版 布尔值(默认使用true)           |
@@ -31,7 +27,7 @@ import TabItem from '@theme/TabItem'
             {
                 Console.WriteLine("源初始化失败");
             }
-            var Versions = ElakeResources.GetVersionList(null, false, false, true);
+            var Versions = ElakeResources.GetVersionList(false, false, true);
             if (Versions.Count == 0)
             {
                 Console.WriteLine("没有检测到版本");

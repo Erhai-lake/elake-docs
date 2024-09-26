@@ -32,7 +32,7 @@ const Config = {
             ({
                 indexDocs: true,
                 indexBlog: false,
-                language: ['en', 'zh'],
+                language: ['zh'],
                 hashed: true,
                 highlightSearchTermsOnTargetPage: true
             })
@@ -40,13 +40,14 @@ const Config = {
     ],
     presets: [
         [
-            '@docusaurus/preset-classic',
+            'classic',
             ({
                 docs: {
                     sidebarPath: './Directory.js',
                     remarkPlugins: [remarkMath],
                     rehypePlugins: [rehypeKatex]
                 },
+                blog: false,
                 theme: {
                     customCss: './src/css/custom.css'
                 }

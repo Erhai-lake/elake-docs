@@ -3,9 +3,6 @@ id: CodeBox
 title: 代码框
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 # 代码框
 
 ## 不带标题

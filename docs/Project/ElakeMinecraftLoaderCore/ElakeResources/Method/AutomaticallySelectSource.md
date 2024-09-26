@@ -3,9 +3,6 @@ id: AutomaticallySelectSource
 title: 自动选择延迟更低的源
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 # 自动选择延迟更低的源
 
 |  属性  |              值               |

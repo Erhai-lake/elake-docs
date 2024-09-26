@@ -3,9 +3,6 @@ id: GetJavaVersion
 title: 获取Java的版本号
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 # 获取Java的版本号
 
 |      属性       |                值                |

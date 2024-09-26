@@ -3,9 +3,6 @@ id: Mermaid
 title: Mermaid
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 # Mermaid
 
 <Tabs>

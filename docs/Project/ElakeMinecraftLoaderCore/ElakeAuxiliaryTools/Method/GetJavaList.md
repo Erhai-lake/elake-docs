@@ -2,12 +2,6 @@
 id: GetJavaList
 title: 获取Java的列表
 ---
-
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
-# 获取Java位长
-
 |  属性  |                              值                              |
 | :----: | :----------------------------------------------------------: |
 | 方法名 |                       `GetJavaList()`                        |

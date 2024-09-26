@@ -3,9 +3,6 @@ id: GETRequest
 title: 网络请求
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 # 网络请求
 
 |    属性    |            值            |

@@ -3,9 +3,6 @@ id: LaTeX
 title: LaTeX
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 # LaTeX
 
 ## 行内公式

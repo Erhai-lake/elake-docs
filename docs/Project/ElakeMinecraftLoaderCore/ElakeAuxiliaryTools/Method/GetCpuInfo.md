@@ -3,9 +3,6 @@ id: GetCpuInfo
 title: 获取CPU信息数组
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 # 获取CPU信息数组
 
 |  属性  |               值                |

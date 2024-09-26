@@ -3,9 +3,6 @@ id: AlarmBox
 title: 报警框
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 # 报警框
 
 ## 注意框

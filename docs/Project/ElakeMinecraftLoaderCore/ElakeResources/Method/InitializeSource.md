@@ -3,9 +3,6 @@ id: InitializeSource
 title: 初始化源
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 # 初始化源
 
 |     属性      |                       值                       |
