@@ -85,7 +85,7 @@ export default withMermaid({
         ],
         // 编辑链接
         editLink: {
-            pattern: '//github.com/Erhai-lake/ElakeDocs/edit/main/docs/:path',
+            pattern: '//github.com/Erhai-lake/ElakeDocs/edit/master/:path',
             text: '在GitHub上编辑此页'
         },
         // 搜索
