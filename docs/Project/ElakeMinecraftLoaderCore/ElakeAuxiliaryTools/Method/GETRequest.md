@@ -1,8 +1,3 @@
----
-id: GETRequest
-title: 网络请求
----
-
 # 网络请求
 
 |    属性    |            值            |
@@ -14,18 +9,15 @@ title: 网络请求
 
 ## 例子
 
-<Tabs>
-    <TabItem value="Code" label="代码">
-        ```C# showLineNumbers
-        private void AuxiliaryTools()
-        {
-            Console.WriteLine(await ElakeAuxiliaryTools.GETRequest("https://api.elake.top/"));
-        }
-        ```
-    </TabItem>
-    <TabItem value="Return" label="返回">
-        ``` showLineNumbers
-        {"Code":2000,"Message":"\u975e\u6cd5\u8bf7\u6c42","Data":"15.95ms","Tips":"API\u63a5\u53e3\u7531\u6d31\u6d77\u5de5\u4f5c\u5ba4(https:\/\/www.elake.top)\u514d\u8d39\u63d0\u4f9b","Version":"3.1.6","Timestamp":1725799399}
-        ```
-    </TabItem>
-</Tabs>
+```C# [代码示例]
+private void AuxiliaryTools()
+{
+    Console.WriteLine(await ElakeAuxiliaryTools.GETRequest("https://api.elake.top/"));
+}
+```
+
+``` [输出]
+{"Code":2000,"Message":"\u975e\u6cd5\u8bf7\u6c42","Data":"15.95ms",
+"Tips":"API\u63a5\u53e3\u7531\u6d31\u6d77\u5de5\u4f5c\u5ba4(https:\/\/www.elake.top)\u514d\u8d39\u63d0\u4f9b","Version":"3.
+1.6","Timestamp":1725799399}
+```

@@ -1,8 +1,3 @@
----
-id: InitializeSearcher
-title: 初始化搜索器
----
-
 # 初始化搜索器
 
 |      属性       |                                                  值                                                   |
@@ -14,7 +9,7 @@ title: 初始化搜索器
 
 ## 例子
 
-```C# showLineNumbers
+```C# [代码示例]
 private void Mods()
 {
     Console.WriteLine("CF:");

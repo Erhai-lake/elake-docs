@@ -1,9 +1,4 @@
----
-id: GetCpuInfo
-title: 获取CPU信息数组
----
-
-# 获取CPU信息数组
+# 获取CPU信息
 
 |  属性  |               值                |
 | :----: | :-----------------------------: |
@@ -13,22 +8,17 @@ title: 获取CPU信息数组
 
 ## 例子
 
-<Tabs>
-    <TabItem value="Code" label="代码">
-        ```C# showLineNumbers
-        private void AuxiliaryTools()
-        {
-            string[] CpuInfos = ElakeAuxiliaryTools.GetCpuInfo();
-            foreach (string CpuInfo in CpuInfos)
-            {
-                Console.WriteLine(CpuInfo);
-            }
-        }
-        ```
-    </TabItem>
-    <TabItem value="Return" label="返回">
-        ``` showLineNumbers
-        GenuineIntel Intel(R)Core(TM)i7-10875H CPU @ 2.30GHz
-        ```
-    </TabItem>
-</Tabs>
+```C# [代码示例]
+private void AuxiliaryTools()
+{
+    string[] CpuInfos = ElakeAuxiliaryTools.GetCpuInfo();
+    foreach (string CpuInfo in CpuInfos)
+    {
+        Console.WriteLine(CpuInfo);
+    }
+}
+```
+
+``` [输出]
+GenuineIntel Intel(R)Core(TM)i7-10875H CPU @ 2.30GHz
+```

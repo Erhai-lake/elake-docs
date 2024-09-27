@@ -1,9 +1,4 @@
----
-id: VersionJson
-title: VersionJson
----
-
-# VersionJson
+# 版本信息
 
 |  属性  |              值              |
 | :----: | :--------------------------: |

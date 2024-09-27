@@ -1,12 +1,9 @@
-# 依赖文件
+# 依赖
 node_modules
 pnpm-lock.yaml
-
-# 构建的文件
-build
-
-# 生成的文档
-.docusaurus
-
+# 开发服务器缓存
+.vitepress/cache
+# 生产构建
+.vitepress/dist
 # VS Code配置文件
 .vscode/settings.json

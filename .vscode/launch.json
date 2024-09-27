@@ -4,9 +4,9 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "热启动",
+            "name": "启动",
             "runtimeExecutable": "pnpm",
-            "runtimeArgs": ["run", "start"],
+            "runtimeArgs": ["run", "dev"],
             "skipFiles": ["<node_internals>/**"],
             "console": "integratedTerminal"
         },
@@ -22,18 +22,9 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "启动本地服务器",
+            "name": "预览",
             "runtimeExecutable": "pnpm",
-            "runtimeArgs": ["run", "serve"],
-            "skipFiles": ["<node_internals>/**"],
-            "console": "integratedTerminal"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "清除缓存",
-            "runtimeExecutable": "pnpm",
-            "runtimeArgs": ["run", "clear"],
+            "runtimeArgs": ["run", "preview"],
             "skipFiles": ["<node_internals>/**"],
             "console": "integratedTerminal"
         }

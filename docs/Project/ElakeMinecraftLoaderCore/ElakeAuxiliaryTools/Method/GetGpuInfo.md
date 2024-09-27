@@ -1,9 +1,4 @@
----
-id: GetGpuInfo
-title: 获取GPU的版本号
----
-
-# 获取GPU的版本号
+# 获取GPU信息
 
 |  属性  |                 值                  |
 | :----: | :---------------------------------: |
@@ -13,23 +8,18 @@ title: 获取GPU的版本号
 
 ## 例子
 
-<Tabs>
-    <TabItem value="Code" label="代码">
-        ```C# showLineNumbers
-        private void AuxiliaryTools()
-        {
-            string[] GpuInfos = ElakeAuxiliaryTools.GetGpuInfo();
-            foreach (string GpuInfo in GpuInfos)
-            {
-                Console.WriteLine(GpuInfo);
-            }
-        }
-        ```
-    </TabItem>
-    <TabItem value="Return" label="返回">
-        ``` showLineNumbers
-        NVIDIA GeForce RTX 2060 4GB
-        Intel(R) UHD Graphics 1GB
-        ```
-    </TabItem>
-</Tabs>
+```C# [代码示例]
+private void AuxiliaryTools()
+{
+    string[] GpuInfos = ElakeAuxiliaryTools.GetGpuInfo();
+    foreach (string GpuInfo in GpuInfos)
+    {
+        Console.WriteLine(GpuInfo);
+    }
+}
+```
+
+``` [输出]
+NVIDIA GeForce RTX 2060 4GB
+Intel(R) UHD Graphics 1GB
+```

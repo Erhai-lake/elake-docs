@@ -1,8 +1,3 @@
----
-id: ElakeApi
-title: ElakeApi
----
-
 > 本文档编写于 2024-01-17
 
 # ElakeApi

@@ -1,8 +1,3 @@
----
-id: GetJavaVersion
-title: 获取Java的版本号
----
-
 # 获取Java的版本号
 
 |      属性       |                值                |
@@ -14,18 +9,13 @@ title: 获取Java的版本号
 
 ## 例子
 
-<Tabs>
-    <TabItem value="Code" label="代码">
-        ```C# showLineNumbers
-        private void AuxiliaryTools()
-        {
-            Console.WriteLine(ElakeAuxiliaryTools.GetJavaVersion("D:/java/JDK21"));
-        }
-        ```
-    </TabItem>
-    <TabItem value="Return" label="返回">
-        ``` showLineNumbers
-        21.0.4
-        ```
-    </TabItem>
-</Tabs>
+```C# [代码示例]
+private void AuxiliaryTools()
+{
+    Console.WriteLine(ElakeAuxiliaryTools.GetJavaVersion("D:/java/JDK21"));
+}
+```
+
+``` [输出]
+21.0.4
+```

@@ -1,8 +1,3 @@
----
-id: ElakeMinecraftLoaderCore
-title: ElakeMinecraftLoaderCore
----
-
 > 本文档编写于 2024-09-11
 
 # ElakeMinecraftLoaderCore

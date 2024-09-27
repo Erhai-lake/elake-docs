@@ -1,8 +1,3 @@
----
-id: GetJavaBitness
-title:  获取Java位长
----
-
 # 获取Java位长
 
 |      属性       |                值                |
@@ -14,18 +9,13 @@ title:  获取Java位长
 
 ## 例子
 
-<Tabs>
-    <TabItem value="Code" label="代码">
-        ```C# showLineNumbers
-        private void AuxiliaryTools()
-        {
-            Console.WriteLine(ElakeAuxiliaryTools.GetJavaBitness("D:/java/JDK21"));
-        }
-        ```
-    </TabItem>
-    <TabItem value="Return" label="返回">
-        ``` showLineNumbers
-        64
-        ```
-    </TabItem>
-</Tabs>
+```C# [代码示例]
+private void AuxiliaryTools()
+{
+    Console.WriteLine(ElakeAuxiliaryTools.GetJavaBitness("D:/java/JDK21"));
+}
+```
+
+``` [输出]
+64
+```

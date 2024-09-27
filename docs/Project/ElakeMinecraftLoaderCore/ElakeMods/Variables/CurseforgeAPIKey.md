@@ -1,8 +1,3 @@
----
-id: CurseforgeAPIKey
-title: CurseforgeAPIKey
----
-
 # CurseforgeAPIKey
 
 |  属性  |                                         值                                         |

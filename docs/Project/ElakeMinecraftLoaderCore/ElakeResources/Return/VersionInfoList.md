@@ -1,12 +1,8 @@
----
-id: VersionInfoList
-title: VersionInfoList
----
-
-# VersionInfoList
+# 版本信息列表
 
 |  属性  |          值           |
 | :----: | :-------------------: |
+| 属性名 |   `VersionInfoList`   |
 | `Name` |    版本名称 字符串    |
 | `Type` |    版本类型 字符串    |
 | `URL`  |  版本下载地址 字符串  |

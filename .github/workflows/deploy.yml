@@ -22,14 +22,11 @@ jobs:
         - name: 安装 pnpm☂
           run: npm install -g pnpm
 
-        - name: 安装 Docusaurus 依赖❄
+        - name: 安装 依赖❄
           run: pnpm install
 
-        - name: 清理 Docusaurus 缓存🌀
-          run: pnpm run docusaurus clear
-
-        - name: 构建 Docusaurus 项目🚽
-          run: pnpm run docusaurus build
+        - name: 构建 项目🚽
+          run: pnpm run build
 
         - name: 同步到分支🚄
           uses: JamesIves/github-pages-deploy-action@v4

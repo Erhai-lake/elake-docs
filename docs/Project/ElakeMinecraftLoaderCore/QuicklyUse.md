@@ -1,8 +1,3 @@
----
-id: QuicklyUse
-title: 快速使用
----
-
 # 快速使用
 
 首先打开你的VS随便创建一个C#的项目,例如我创建一个**WPF应用(.NET Framework)**,**.NET Framework**的版本是`4.7.2`
@@ -19,6 +14,6 @@ title: 快速使用
 
 最后在命名空间引用
 
-```C# showLineNumbers
+```C#
 using ElakeMinecraftLoaderCore;
 ```

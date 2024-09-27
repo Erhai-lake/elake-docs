@@ -1,9 +1,4 @@
----
-id: GetRAMInfo
-title: 获取RAM的版本号
----
-
-# 获取RAM的版本号
+# 获取RAM信息
 
 |  属性  |                  值                  |
 | :----: | :----------------------------------: |
@@ -13,22 +8,17 @@ title: 获取RAM的版本号
 
 ## 例子
 
-<Tabs>
-    <TabItem value="Code" label="代码">
-        ```C# showLineNumbers
-        private void AuxiliaryTools()
-        {
-            string[] RAMInfos = ElakeAuxiliaryTools.GetRAMInfo();
-            foreach (string RAMInfo in RAMInfos)
-            {
-                Console.WriteLine(RAMInfo);
-            }
-        }
-        ```
-    </TabItem>
-    <TabItem value="Return" label="返回">
-        ``` showLineNumbers
-        Crucial CT16G4SFRA32A.C8FF 16GB 3200MHz
-        ```
-    </TabItem>
-</Tabs>
+```C# [代码示例]
+private void AuxiliaryTools()
+{
+    string[] RAMInfos = ElakeAuxiliaryTools.GetRAMInfo();
+    foreach (string RAMInfo in RAMInfos)
+    {
+        Console.WriteLine(RAMInfo);
+    }
+}
+```
+
+``` [输出]
+Crucial CT16G4SFRA32A.C8FF 16GB 3200MHz
+```
