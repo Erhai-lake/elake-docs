@@ -36,13 +36,3 @@ features:
     title: 光速访问
     details: 采用静态 HTML 实现快速的页面初次加载,使用客户端路由实现快速的页面切换导航.
 ---
-
-<style>
-:root {
-    --vp-button-brand-bg: #80CEFF;
-    --vp-home-hero-name-color: transparent;
-    --vp-home-hero-name-background: -webkit-linear-gradient(-50deg, #80CEFF, #FFBDD7, #E61D39);
-    --vp-home-hero-image-filter: blur(75px);
-    --vp-home-hero-image-background-image: linear-gradient(136deg, #80CEFF 0, #80CEFF 40%, #FFBDD7 40%, #FFBDD7 60%, #E61D39 60%, #E61D39 100%);
-}
-</style>

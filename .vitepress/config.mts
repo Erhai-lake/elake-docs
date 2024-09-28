@@ -13,6 +13,8 @@ import { Navbar } from './Navbar'
 
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
+    // 排除目录
+    srcExclude: ['**/README.md'],
     // 继承escook主题
     extends: escookConfig,
     // 语言

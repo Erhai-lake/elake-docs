@@ -8,6 +8,7 @@ import { EnhanceAppContext } from 'vitepress'
 import { l2d } from './l2d'
 // 自定义布局
 import Layout from './Layout.vue'
+import './index.css'
 
 export default {
     ...Theme,
