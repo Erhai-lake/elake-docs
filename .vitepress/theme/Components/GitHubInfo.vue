@@ -146,7 +146,8 @@ export default {
             } catch {
                 this.Data = [
                     {
-                        Sha: '0000000000',
+                        Sha: '00000000000000000000000000000000000000000000000000',
+                        ShortSha: '0000000000',
                         Name: '洱海工作室',
                         AvatarUrl: '/.vitepress/static/Images/Logo.png',
                         Message: '出错啦~',
@@ -198,6 +199,8 @@ export default {
             const Minutes = Math.floor(Seconds / 60)
             const Hours = Math.floor(Minutes / 60)
             const Days = Math.floor(Hours / 24)
+            const Months = Now.getMonth() - Past.getMonth() + 12 * (Now.getFullYear() - Past.getFullYear())
+            const Years = Math.floor(Months / 12)
             if (Seconds < 60) {
                 return `${Seconds} 秒前`
             } else if (Minutes < 60) {
@@ -206,6 +209,10 @@ export default {
                 return `${Hours} 小时前`
             } else if (Days < 30) {
                 return `${Days} 天前`
+            } else if (Months < 12) {
+                return `${Months} 月前`
+            } else if (Years < 1) {
+                return `${Months} 月前`
             } else {
                 return DateString
             }
