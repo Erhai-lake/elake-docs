@@ -50,7 +50,7 @@ export default {
             RefreshID: null,
             Route1: null,
             Route2: null,
-            LastUpdateTime: '等待更新',
+            LastUpdateTime: '1145-14-19 19:81',
             Interval: null,
             WordCount: 0,
             ReadingTime: 0,
@@ -72,10 +72,8 @@ export default {
                 this.RefreshData()
                 this.Route2 = JSON.parse(JSON.stringify(this.Route1))
             }
-            console.log(this.Route1.path, this.Route2.path !== '' ? this.Route2.path : '')
         },
         RefreshData() {
-            console.log('Route2更新')
             this.Route2 = JSON.parse(JSON.stringify(this.Route1))
             this.Interval = setInterval(this.GetLastUpdateTime, 50)
             this.CalculateWordCount()
@@ -134,29 +132,29 @@ export default {
     grid-template-rows: 1fr;
     grid-column-gap: 20px;
     color: #9ca8af;
-}
 
-.MetadataItem {
-    padding: 3px 20px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 50px;
-    transition: all 0.15s;
-    user-select: none;
-}
+    .MetadataItem {
+        padding: 3px 20px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: all 0.15s;
+        user-select: none;
 
-.MetadataItem:hover {
-    background-color: #7a7a7a46;
-}
+        &:hover {
+            background-color: #7a7a7a46;
+        }
 
-.MetadataItem:active {
-    background-color: #80ceff63;
-}
+        &:active {
+            background-color: #80ceff63;
+        }
 
-.MetadataItem svg {
-    margin-right: 10px;
+        svg {
+            margin-right: 10px;
+        }
+    }
 }
 
 .Hitokoto {
