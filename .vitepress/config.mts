@@ -30,7 +30,7 @@ export default withMermaid({
             'link',
             {
                 rel: 'icon',
-                href: '/.vitepress/static/Images/Logo.ico'
+                href: '/favicon.ico'
             }
         ]
     ],
@@ -65,9 +65,9 @@ export default withMermaid({
     // 默认暗黑主题
     appearance: 'dark',
     themeConfig: {
+        // https://vitepress.dev/reference/default-theme-config
         // 鼠标点击纸屑
         confetti: true,
-        // https://vitepress.dev/reference/default-theme-config
         // i18
         i18nRouting: false,
         // Logo
@@ -123,6 +123,10 @@ export default withMermaid({
         // 移动端侧边栏菜单标题
         sidebarMenuLabel: '目录',
         // 移动端返回顶部按钮标题
-        returnToTopLabel: '返回顶部'
+        returnToTopLabel: '返回顶部',
+        // 最后更新标题
+        lastUpdated: {
+            text: '最后更新于 '
+        }
     }
 })
