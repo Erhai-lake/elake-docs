@@ -30,7 +30,7 @@ export default withMermaid({
             'link',
             {
                 rel: 'icon',
-                href: '/favicon.ico'
+                href: '//api.elake.top/Logo.png'
             }
         ]
     ],
@@ -71,7 +71,7 @@ export default withMermaid({
         // i18
         i18nRouting: false,
         // Logo
-        logo: '/.vitepress/static/Images/Logo.svg',
+        logo: '//api.elake.top/Logo.png',
         // 导航栏
         nav: Navbar,
         // 侧边栏

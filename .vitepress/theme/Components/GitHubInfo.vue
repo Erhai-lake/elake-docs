@@ -149,7 +149,7 @@ export default {
                         Sha: '00000000000000000000000000000000000000000000000000',
                         ShortSha: '0000000000',
                         Name: '洱海工作室',
-                        AvatarUrl: '/.vitepress/static/Images/Logo.png',
+                        AvatarUrl: '//api.elake.top/Logo.png',
                         Message: '出错啦~',
                         Time: '0000-00-00'
                     }
@@ -157,7 +157,7 @@ export default {
                 this.ContributorsData = [
                     {
                         Name: '洱海工作室',
-                        AvatarUrl: '/.vitepress/static/Images/Logo.png'
+                        AvatarUrl: '//api.elake.top/Logo.png'
                     }
                 ]
             }

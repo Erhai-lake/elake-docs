@@ -14,10 +14,14 @@ export default {
     // 自定义布局
     Layout: Layout,
     async enhanceApp(ctx: EnhanceAppContext) {
-        Theme?.enhanceApp?.(ctx)
-        const { loadOml2d } = await import('oh-my-live2d')
-        loadOml2d({
-            models: l2d
-        })
+        if (Theme.enhanceApp) {
+            await Theme.enhanceApp(ctx)
+        }
+        if (!import.meta.env.SSR) {
+            const { loadOml2d } = await import('oh-my-live2d')
+            loadOml2d({
+                models: l2d
+            })
+        }
     }
 }

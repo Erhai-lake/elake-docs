@@ -6,7 +6,7 @@ hero:
   text: "记录点滴 见证思考 分享成长"
   tagline: 项目说明 开发文档 脑溢血急救中心
   image:
-    src: /.vitepress/static/Images/Logo.png
+    src: //api.elake.top/Logo.png
     alt: 洱海工作室
   actions:
     - theme: brand
