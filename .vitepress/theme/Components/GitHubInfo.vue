@@ -20,7 +20,7 @@
 import { useRoute } from 'vitepress'
 
 export default {
-    name: 'Contributors',
+    name: 'GitHubInfo',
     data() {
         return {
             RefreshID: null,
@@ -50,13 +50,13 @@ export default {
             const Repo = 'ElakeDocs'
             const FilePath = `${this.Route1.path}.md` || 'README'
             try {
-                // const Response = await fetch(
-                //     `https://api.github.com/repos/${Owner}/${Repo}/commits?path=${FilePath}`
-                // )
-                // const Commits = await Response.json()
+                const Response = await fetch(
+                    `https://api.github.com/repos/${Owner}/${Repo}/commits?path=${FilePath}`
+                )
+                const Commits = await Response.json()
                 // 测试用数据
-                const Response = '[{\"commit\":{\"author\":{\"name\":\"Erhai_lake\",\"email\":\"fuzixuan0714_0826@163.com\",\"date\":\"2024-09-27T17:12:29Z\"},\"message\":\"3.0 重大更新 又一次重构文档!\\n使用 vitepress 作为框架,发现 docusaurus 不是很好用()\\n还好的是,经过上次重构,文档移植方便了许多,这次一天时间就重构完毕了\",\"tree\":{\"sha\":\"32430967efae8e9652b26189c9b3961977221e2e\",\"url\":\"https://api.github.com/repos/Erhai-lake/ElakeDocs/git/trees/32430967efae8e9652b26189c9b3961977221e2e\"},\"url\":\"https://api.github.com/repos/Erhai-lake/ElakeDocs/git/commits/605f05e4fba0735fd8516424b6462ff02da49230\",\"comment_count\":0,\"verification\":{\"verified\":false,\"reason\":\"unsigned\",\"signature\":null,\"payload\":null}},\"author\":{\"login\":\"Erhai-lake\"}},{\"commit\":{\"author\":{\"name\":\"Qi-Month\",\"email\":\"fuzixuan0714_0826@163.com\",\"date\":\"2024-09-27T17:12:29Z\"},\"message\":\"3.0 重大更新 又一次重构文档!\\n使用 vitepress 作为框架,发现 docusaurus 不是很好用()\\n还好的是,经过上次重构,文档移植方便了许多,这次一天时间就重构完毕了\",\"tree\":{\"sha\":\"32430967efae8e9652b26189c9b3961977221e2e\",\"url\":\"https://api.github.com/repos/Erhai-lake/ElakeDocs/git/trees/32430967efae8e9652b26189c9b3961977221e2e\"},\"url\":\"https://api.github.com/repos/Erhai-lake/ElakeDocs/git/commits/605f05e4fba0735fd8516424b6462ff02da49230\",\"comment_count\":0,\"verification\":{\"verified\":false,\"reason\":\"unsigned\",\"signature\":null,\"payload\":null}},\"author\":{\"login\":\"Qi-Month\"}}]'
-                const Commits = JSON.parse(Response)
+                // const Response = '[{\"commit\":{\"author\":{\"name\":\"Erhai_lake\",\"email\":\"fuzixuan0714_0826@163.com\",\"date\":\"2024-09-27T17:12:29Z\"},\"message\":\"3.0 重大更新 又一次重构文档!\\n使用 vitepress 作为框架,发现 docusaurus 不是很好用()\\n还好的是,经过上次重构,文档移植方便了许多,这次一天时间就重构完毕了\",\"tree\":{\"sha\":\"32430967efae8e9652b26189c9b3961977221e2e\",\"url\":\"https://api.github.com/repos/Erhai-lake/ElakeDocs/git/trees/32430967efae8e9652b26189c9b3961977221e2e\"},\"url\":\"https://api.github.com/repos/Erhai-lake/ElakeDocs/git/commits/605f05e4fba0735fd8516424b6462ff02da49230\",\"comment_count\":0,\"verification\":{\"verified\":false,\"reason\":\"unsigned\",\"signature\":null,\"payload\":null}},\"author\":{\"login\":\"Erhai-lake\"}},{\"commit\":{\"author\":{\"name\":\"Qi-Month\",\"email\":\"fuzixuan0714_0826@163.com\",\"date\":\"2024-09-27T17:12:29Z\"},\"message\":\"3.0 重大更新 又一次重构文档!\\n使用 vitepress 作为框架,发现 docusaurus 不是很好用()\\n还好的是,经过上次重构,文档移植方便了许多,这次一天时间就重构完毕了\",\"tree\":{\"sha\":\"32430967efae8e9652b26189c9b3961977221e2e\",\"url\":\"https://api.github.com/repos/Erhai-lake/ElakeDocs/git/trees/32430967efae8e9652b26189c9b3961977221e2e\"},\"url\":\"https://api.github.com/repos/Erhai-lake/ElakeDocs/git/commits/605f05e4fba0735fd8516424b6462ff02da49230\",\"comment_count\":0,\"verification\":{\"verified\":false,\"reason\":\"unsigned\",\"signature\":null,\"payload\":null}},\"author\":{\"login\":\"Qi-Month\"}}]'
+                // const Commits = JSON.parse(Response)
                 const ContributorsSet = new Set()
                 Commits.forEach(Commit => {
                     ContributorsSet.add(Commit.author.login)

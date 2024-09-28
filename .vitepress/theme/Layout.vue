@@ -1,7 +1,7 @@
 <script setup>
 import DefaultTheme from 'vitepress/theme'
 import ArticleMetadata from '/.vitepress/theme/Components/ArticleMetadata.vue'
-import Contributors from '/.vitepress/theme/Components/Contributors.vue'
+import GitHubInfo from '/.vitepress/theme/Components/GitHubInfo.vue'
 
 const { Layout } = DefaultTheme
 </script>
@@ -12,7 +12,7 @@ const { Layout } = DefaultTheme
             <ArticleMetadata />
         </template>
         <template #doc-footer-before>
-            <Contributors />
+            <GitHubInfo />
         </template>
     </Layout>
 </template>
