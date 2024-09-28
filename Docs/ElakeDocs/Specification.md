@@ -169,7 +169,7 @@ while (i <= 3) {
     </TabItem>
 </Tabs>
 
-更多组件,请浏览[文档组件](/docs/Components)
+更多组件,请浏览[文档组件](/Docs/ElakeDocs/Components/AlarmBox)
 
 如果没有你想要的,你可以自己写一个,文档的框架是[docusaurus](//docusaurus.io),经过检查后可以加入
 
