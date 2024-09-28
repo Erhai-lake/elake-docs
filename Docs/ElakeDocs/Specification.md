@@ -6,14 +6,6 @@
 Nothing can be accomplished without norms or standards
 :::
 
-## 每篇文档需要编写日期
-
-在每篇文档的第一个文章头部,添加以下内容:
-
-```md
-> 本文档编写于 xxxx-xx-xx
-```
-
 ## 每篇文档有且只能有一个一级标题
 
 ### 正例

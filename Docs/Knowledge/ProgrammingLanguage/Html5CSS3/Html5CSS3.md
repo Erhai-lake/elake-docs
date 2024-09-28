@@ -1,5 +1,3 @@
-> 本文档编写于 2024-01-28
-
 # Html5CSS3
 
 **Html**是超文本标记语言,原`HyperText Markup Language`,是一种用于创建网页的标准标记语言

@@ -1,5 +1,3 @@
-> 本文档编写于 2024-09-11
-
 # ElakeMinecraftLoaderCore
 
 **ElakeMinecraftLoaderCore**是由洱海工作室开发并公布的一个Minecraft启动器核心

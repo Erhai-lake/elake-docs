@@ -20,11 +20,9 @@
 
 如果是文档首次创建文章,请创建`Java.md`
 
-然后在头部编写时间和一级标题
+然后在头部编写一级标题
 
 ```md [/Docs/Knowledge/ProgrammingLanguage/Java/Java.md]
-> 本文档编写于 2024-08-17
-
 # 前言
 ```
 
