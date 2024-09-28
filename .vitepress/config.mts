@@ -38,8 +38,6 @@ export default withMermaid({
     ],
     // 最后更新时间
     lastUpdated: true,
-    // 路径不带html
-    cleanUrls: true,
     markdown: {
         // 报警框
         container: {
