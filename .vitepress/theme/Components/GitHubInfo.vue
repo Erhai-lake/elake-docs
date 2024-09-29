@@ -11,31 +11,20 @@
     </div>
     <div class="UpdateLog">
         <p class="Title">更新日志</p>
-        <div class="FoldingPanel">
-            <div class="FoldingPanelTitle" @click="Folding" :title="'点击展开日志\n所有元素鼠标悬浮可显示更多\n点击头像跳转用户页\n点击哈希跳转提交记录'">
-                <div class="Left">
-                    <svg t="1727498405398" class="icon" viewBox="0 0 1024 1024" version="1.1"
-                        xmlns="http://www.w3.org/2000/svg" p-id="1471" width="16" height="16">
-                        <path
-                            d="M512.736 992a483.648 483.648 0 0 1-164.672-28.8 36.88 36.88 0 1 1 25.104-69.36 407.456 407.456 0 1 0-184.608-136.512A36.912 36.912 0 0 1 129.488 801.6a473.424 473.424 0 0 1-97.472-290A480 480 0 1 1 512.736 992z"
-                            fill="#9ca8af" p-id="1472"></path>
-                        <path
-                            d="M685.6 638.592a32 32 0 0 1-14.032-2.96l-178.048-73.888a36.8 36.8 0 0 1-22.912-34.016V236.672a36.944 36.944 0 1 1 73.888 0v266.72l155.2 64.272a36.336 36.336 0 0 1 19.952 48 37.616 37.616 0 0 1-34.048 22.928z"
-                            fill="#9ca8af" p-id="1473"></path>
-                    </svg>
-                    <span>最后编辑于 {{ LastUpdateTime }}</span>
-                </div>
-                <div></div>
-                <div class="Arrow">
-                    <svg t="1727527794943" class="icon" viewBox="0 0 1024 1024" version="1.1"
-                        xmlns="http://www.w3.org/2000/svg" p-id="1579" width="16" height="16">
-                        <path
-                            d="M895.701333 300.117333c0 9.6-3.2 19.285333-9.6 27.392l-340.906666 423.808a43.733333 43.733333 0 0 1-68.096 0L137.984 329.301333A43.690667 43.690667 0 0 1 206.08 274.602667l305.109333 379.605333 306.773334-381.525333a43.690667 43.690667 0 0 1 77.738666 27.434666z"
-                            fill="#9ca8af" p-id="1580"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="FoldingPanelContent">
+        <FoldingPanel Height=500 :Title="'点击展开日志\n所有元素鼠标悬浮可显示更多\n点击头像跳转用户页\n点击哈希跳转提交记录'" class="FoldingPanel">
+            <template #Title>
+                <svg t="1727498405398" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="1471" width="16" height="16">
+                    <path
+                        d="M512.736 992a483.648 483.648 0 0 1-164.672-28.8 36.88 36.88 0 1 1 25.104-69.36 407.456 407.456 0 1 0-184.608-136.512A36.912 36.912 0 0 1 129.488 801.6a473.424 473.424 0 0 1-97.472-290A480 480 0 1 1 512.736 992z"
+                        fill="#9ca8af" p-id="1472"></path>
+                    <path
+                        d="M685.6 638.592a32 32 0 0 1-14.032-2.96l-178.048-73.888a36.8 36.8 0 0 1-22.912-34.016V236.672a36.944 36.944 0 1 1 73.888 0v266.72l155.2 64.272a36.336 36.336 0 0 1 19.952 48 37.616 37.616 0 0 1-34.048 22.928z"
+                        fill="#9ca8af" p-id="1473"></path>
+                </svg>
+                <span>最后编辑于 {{ LastUpdateTime }}</span>
+            </template>
+            <template #Content>
                 <ul>
                     <li v-for="Item in Data" :key="Item.id">
                         <svg t="1727530302325" class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -53,8 +42,8 @@
                         <p class="CommitTime" :title="Item.Time">{{ Item.Time }}</p>
                     </li>
                 </ul>
-            </div>
-        </div>
+            </template>
+        </FoldingPanel>
     </div>
 </template>
 
@@ -100,15 +89,18 @@ export default {
             const Repo = 'ElakeDocs'
             const FilePath = `${this.Route1.path}.md` || 'README'
             try {
-                const Response = await fetch(
-                    // `https://api.github.com/repos/${Owner}/${Repo}/commits?path=${FilePath}`
-                )
-                const Commits = await Response.json()
-
-                // 测试用数据
-                // const Response = '[{\"sha\":\"605f05e4fba0735fd8516424b6462ff02da49230\",\"commit\":{\"author\":{\"date\":\"2024-09-27T17:12:29Z\"},\"message\":\"3.0 重大更新 又一次重构文档!\\n使用 vitepress 作为框架,发现 docusaurus 不是很好用()\\n还好的是,经过上次重构,文档移植方便了许多,这次一天时间就重构完毕了\"},\"author\":{\"login\":\"Erhai-lake\"}},{\"sha\":\"605f05e4fba0735fd8516424b6462ff02da49230\",\"commit\":{\"author\":{\"date\":\"2024-09-27T17:12:29Z\"},\"message\":\"3.0 重大更新 又一次重构文档!\\n使用 vitepress 作为框架,发现 docusaurus 不是很好用()\\n还好的是,经过上次重构,文档移植方便了许多,这次一天时间就重构完毕了\"},\"author\":{\"login\":\"Erhai-lake\"}},{\"sha\":\"605f05e4fba0735fd8516424b6462ff02da49230\",\"commit\":{\"author\":{\"date\":\"2024-09-27T17:12:29Z\"},\"message\":\"3.0 重大更新 又一次重构文档!\\n使用 vitepress 作为框架,发现 docusaurus 不是很好用()\\n还好的是,经过上次重构,文档移植方便了许多,这次一天时间就重构完毕了\"},\"author\":{\"login\":\"Qi-Month\"}}]'
-                // const Commits = JSON.parse(Response)
-
+                let Response = null
+                let Commits = null
+                console.log(import.meta.env)
+                if (import.meta.env.MODE === 'development') {
+                    Response = '[{\"sha\":\"605f05e4fba0735fd8516424b6462ff02da49230\",\"commit\":{\"author\":{\"date\":\"2024-09-27T17:12:29Z\"},\"message\":\"3.0 重大更新 又一次重构文档!\\n使用 vitepress 作为框架,发现 docusaurus 不是很好用()\\n还好的是,经过上次重构,文档移植方便了许多,这次一天时间就重构完毕了\"},\"author\":{\"login\":\"Erhai-lake\"}},{\"sha\":\"ea04ef545ad64834b0ee1a9c11be84b8bb6f4743\",\"commit\":{\"author\":{\"date\":\"2024-09-18T07:13:11Z\"},\"message\":\"黑名单增加VS Code配置文件\"},\"author\":{\"login\":\"Qi-Month\"}},{\"sha\":\"9c43494bf2777ddd6ee122cd64fccb42eb179ea7\",\"commit\":{\"author\":{\"date\":\"2024-09-16T07:08:17Z\"},\"message\":\"重大更新,洱海文档2.0,更换了站点框架\\n文档全部重构!\"},\"author\":{\"login\":\"Erhai-lake\"}}]'
+                    Commits = JSON.parse(Response)
+                } else {
+                    Response = await fetch(
+                        `https://api.github.com/repos/${Owner}/${Repo}/commits?path=${FilePath}`
+                    )
+                    Commits = await Response.json()
+                }
                 const DataSet = new Set()
                 Commits.forEach(Item => {
                     DataSet.add(
@@ -168,13 +160,6 @@ export default {
             } else {
                 window.open(`https://github.com/Erhai-lake/ElakeDocs/commit/${Value}`)
             }
-        },
-        Folding() {
-            let FoldingPanelContent = document.querySelector('.FoldingPanelContent')
-            let Arrow = document.querySelector('.Arrow svg')
-            let Height = 500
-            FoldingPanelContent.style.height = FoldingPanelContent.offsetHeight === Height ? 0 + 'px' : Height + 'px'
-            Arrow.style.transform = FoldingPanelContent.offsetHeight === Height ? 'rotate(0deg)' : 'rotate(-180deg)'
         },
         GetLastUpdateTime() {
             const OfficialLastUpdateTimeFatherElement = document.querySelector('.last-updated > p')
@@ -309,82 +294,52 @@ export default {
     border-radius: 10px;
     user-select: none;
 
-    .FoldingPanelTitle {
-        padding: 0 20px;
-        height: 60px;
-        background-color: #b3b3b33f;
-        cursor: pointer;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
-
-        svg {
-            margin-right: 10px;
-        }
-
-        div {
-            display: flex;
-            align-items: center;
-        }
-
-        .Arrow {
-            justify-content: right;
-
-            svg {
-                transition: all 0.15s;
-            }
-        }
+    svg {
+        margin-right: 10px;
     }
 
-    .FoldingPanelContent {
-        padding: 0 20px;
-        height: 0;
-        background-color: #b3b3b33f;
-        transition: height 0.2s;
-        overflow-y: auto;
 
-        ul {
-            li {
-                padding: 5px 0;
-                display: grid;
-                grid-template-columns: 26px 26px 120px 4fr 100px;
-                grid-column-gap: 20px;
+    ul {
+        li {
+            padding: 5px 0;
+            display: grid;
+            grid-template-columns: 26px 26px 120px 4fr 100px;
+            grid-column-gap: 20px;
 
-                svg {
-                    transform: rotate(90deg);
-                }
+            svg {
+                transform: rotate(90deg);
+            }
 
-                .CommitAvatar {
-                    width: 26px;
-                    height: 26px;
-                    border-radius: 50%;
-                    background-size: cover;
-                    background-position: center;
-                    cursor: pointer;
-                }
+            .CommitAvatar {
+                width: 26px;
+                height: 26px;
+                border-radius: 50%;
+                background-size: cover;
+                background-position: center;
+                cursor: pointer;
+            }
 
-                .CommitSha {
-                    text-align: center;
-                    color: #dadaff;
-                    background-color: #009dffa6;
-                    border-radius: 10px;
-                    cursor: pointer;
-                }
+            .CommitSha {
+                text-align: center;
+                color: #dadaff;
+                background-color: #009dffa6;
+                border-radius: 10px;
+                cursor: pointer;
+            }
 
-                .CommitContent {
-                    width: 100%;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
+            .CommitContent {
+                width: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
 
-                .CommitTime {
-                    text-align: center;
-                }
+            .CommitTime {
+                text-align: center;
+            }
 
-                &:nth-child(odd) .CommitSha {
-                    background-color: #ff0000a6;
-                }
+            &:nth-child(odd) .CommitSha {
+                background-color: #ff0000a6;
             }
         }
     }

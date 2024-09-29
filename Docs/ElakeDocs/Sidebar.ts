@@ -59,6 +59,10 @@ export const ElakeDocsSidebar: any[] = [
                     {
                         text: 'Emoji',
                         link: '/Docs/ElakeDocs/Components/Emoji'
+                    },
+                    {
+                        text: '折叠面板',
+                        link: '/Docs/ElakeDocs/Components/FoldingPanel'
                     }
                 ]
             }

@@ -50,7 +50,7 @@ export default {
             RefreshID: null,
             Route1: null,
             Route2: null,
-            LastUpdateTime: '1145-14-19 19:81',
+            LastUpdateTime: '0000-00-00 00:00',
             Interval: null,
             WordCount: 0,
             ReadingTime: 0,

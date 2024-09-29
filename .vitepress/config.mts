@@ -6,6 +6,8 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 import escookConfig from '@escook/vitepress-theme/config'
 // 分组代码块图标
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
+// 图片放大
+import mdItCustomAttrs from "markdown-it-custom-attrs"
 // 目录
 import { Sidebar } from './Sidebar'
 // 导航栏
@@ -28,13 +30,9 @@ export default withMermaid({
     // 头部
     head: [
         // Logo
-        [
-            'link',
-            {
-                rel: 'icon',
-                href: '//api.elake.top/Logo.png'
-            }
-        ]
+        ['link', { rel: 'icon', href: '//api.elake.top/Logo.png' },],
+        ["link", { rel: "stylesheet", href: "//cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" }],
+        ["script", { src: "//cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js" }]
     ],
     // 最后更新时间
     lastUpdated: true,
@@ -53,6 +51,9 @@ export default withMermaid({
         },
         config(MD) {
             MD.use(groupIconMdPlugin)
+            MD.use(mdItCustomAttrs, "image", {
+                "data-fancybox": "gallery",
+            })
         },
         // 启用数学公式
         math: true
