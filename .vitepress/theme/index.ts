@@ -5,7 +5,7 @@ import '@escook/vitepress-theme/style.css'
 import 'virtual:group-icons.css'
 import { EnhanceAppContext } from 'vitepress'
 // 看板娘
-import { l2d } from './l2d'
+import { live2d } from './live2d'
 // 自定义布局
 import Layout from './Layout.vue'
 import './index.css'
@@ -21,7 +21,46 @@ export default {
         if (!import.meta.env.SSR) {
             const { loadOml2d } = await import('oh-my-live2d')
             loadOml2d({
-                models: l2d
+                dockedPosition: 'right',
+                models: live2d,
+                sayHello: false,
+                menus: {
+                    items: [
+                        {
+                            id: 'Rest',
+                            icon: 'icon-rest',
+                            title: '休息',
+                            onClick(oml2d): void {
+                                oml2d.stageSlideOut()
+                                oml2d.statusBarOpen()
+                            }
+                        },
+                        {
+                            id: 'SwitchModel',
+                            icon: 'icon-switch',
+                            title: '切换模型',
+                            onClick(oml2d): void {
+                                oml2d.loadNextModel()
+                            }
+                        },
+                        {
+                            id: 'SwitchClothes',
+                            icon: 'icon-skin',
+                            title: '切换衣服',
+                            onClick(oml2d): void {
+                                oml2d.loadNextModelClothes()
+                            }
+                        },
+                        {
+                            id: 'About',
+                            icon: 'icon-about',
+                            title: '关于',
+                            onClick(): void {
+                                window.open('//www.elake.top')
+                            }
+                        }
+                    ]
+                }
             })
         }
     }

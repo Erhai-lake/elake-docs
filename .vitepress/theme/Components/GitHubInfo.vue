@@ -101,7 +101,7 @@ export default {
             const FilePath = `${this.Route1.path}.md` || 'README'
             try {
                 const Response = await fetch(
-                    `https://api.github.com/repos/${Owner}/${Repo}/commits?path=${FilePath}`
+                    // `https://api.github.com/repos/${Owner}/${Repo}/commits?path=${FilePath}`
                 )
                 const Commits = await Response.json()
 
