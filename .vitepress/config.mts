@@ -33,8 +33,11 @@ export default withMermaid({
     head: [
         // Logo
         ['link', { rel: 'icon', href: '//api.elake.top/Logo.png' },],
+        // 图集
         ["link", { rel: "stylesheet", href: "//cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" }],
-        ["script", { src: "//cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js" }]
+        ["script", { src: "//cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js" }],
+        // 新年快乐
+        // ["script", { src: "//api.vvhan.com/api/script/denglong" }]
     ],
     // 最后更新时间
     lastUpdated: true,

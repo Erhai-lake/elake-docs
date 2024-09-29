@@ -90,10 +90,10 @@ Test()
 ```vue [vue]
 ```
 
-```sh [npm]
+```shell [npm]
 ```
 
-```sh [pnpm]
+```shell [pnpm]
 ```
 
 === 示例
@@ -102,10 +102,10 @@ Test()
 ```vue [vue]
 ```
 
-```sh [npm]
+```shell [npm]
 ```
 
-```sh [pnpm]
+```shell [pnpm]
 ```
 ````
 :::
@@ -437,23 +437,23 @@ Test()
 === 效果
 
 ::: code-group
-```sh [npm]
+```shell [npm]
 npm init
 ```
 
-```sh [pnpm]
+```shell [pnpm]
 pnpm init
 ```
 
-```sh [yarn]
+```shell [yarn]
 yarn init
 ```
 
-```sh [bun]
+```shell [bun]
 bun init
 ```
 
-```sh [git]
+```shell [git]
 git init
 ```
 :::
@@ -462,23 +462,23 @@ git init
 
 ````md
 ::: code-group
-```sh [npm]
+```shell [npm]
 npm init
 ```
 
-```sh [pnpm]
+```shell [pnpm]
 pnpm init
 ```
 
-```sh [yarn]
+```shell [yarn]
 yarn init
 ```
 
-```sh [bun]
+```shell [bun]
 bun init
 ```
 
-```sh [git]
+```shell [git]
 git init
 ```
 :::

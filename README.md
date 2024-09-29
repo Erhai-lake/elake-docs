@@ -6,9 +6,54 @@
 
 [Gitee](//gitee.com/erhai-lake/elake-docs)
 
-## 运行
+## 开始
 
-下载源码,使用`pnpm i`安装依赖,使用`pnpm run dev`启动服务
+### 克隆仓库
+
+```shell
+git clone git@github.com:Erhai-lake/ElakeDocs.git
+```
+
+或者
+
+```shell
+git clone https://github.com/Erhai-lake/ElakeDocs.git
+```
+### 设置 NPM 镜像源(可选)
+
+使用腾讯源
+
+```shell
+npm config set registry https://mirrors.cloud.tencent.com/npm/
+```
+
+### 安装 PNPM
+
+```shell
+npm install pnpm -g
+```
+
+### 设置 PNPM 镜像源(可选)
+
+使用腾讯源
+
+```shell
+pnpm config set registry https://mirrors.cloud.tencent.com/npm/
+```
+
+### 安装依赖
+
+```shell
+pnpm i
+```
+
+### 运行
+
+```shell
+pnpm run dev
+```
+
+访问 [//localhost:3000](//localhost:3000)
 
 > [!WARNING]
 > 请不要使用除`dev`,`build`,`preview`之外的命令!
