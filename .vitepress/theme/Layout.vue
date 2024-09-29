@@ -1,9 +1,9 @@
 <script setup>
-import DefaultTheme from 'vitepress/theme'
+import Theme from '@escook/vitepress-theme'
 import ArticleMetadata from '/.vitepress/theme/Components/ArticleMetadata.vue'
 import GitHubInfo from '/.vitepress/theme/Components/GitHubInfo.vue'
 
-const { Layout } = DefaultTheme
+const { Layout } = Theme
 </script>
 
 <template>
