@@ -250,7 +250,7 @@ export default {
 
             &:hover .Avatar {
                 transition: all 0.15s;
-                animation: RBG 0.1s linear infinite;
+                animation: RBG 0.01s linear infinite;
             }
 
             &::before {

@@ -7,7 +7,9 @@ import escookConfig from '@escook/vitepress-theme/config'
 // 分组代码块图标
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 // 图片放大
-import mdItCustomAttrs from "markdown-it-custom-attrs"
+import mdItCustomAttrs from 'markdown-it-custom-attrs'
+// 选项卡
+import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
 // 目录
 import { Sidebar } from './Sidebar'
 // 导航栏
@@ -54,6 +56,7 @@ export default withMermaid({
             MD.use(mdItCustomAttrs, "image", {
                 "data-fancybox": "gallery",
             })
+            MD.use(tabsMarkdownPlugin)
         },
         // 启用数学公式
         math: true

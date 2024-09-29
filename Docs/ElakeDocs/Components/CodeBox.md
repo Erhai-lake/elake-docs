@@ -6,6 +6,9 @@
 
 需要做的就是将有效的语言别名附加到代码块的开头
 
+:::tabs
+=== 效果
+
 ```js
 Sum = 0
 const Test = () => {
@@ -20,7 +23,9 @@ const Test = () => {
 Test()
 ```
 
-````
+=== 示例
+
+````md
 ```js
 Sum = 0
 const Test = () => {
@@ -35,9 +40,13 @@ const Test = () => {
 Test()
 ```
 ````
+:::
 
 ## 标题
 
+:::tabs
+=== 效果
+
 ```js [测试用js]
 Sum = 0
 const Test = () => {
@@ -52,7 +61,9 @@ const Test = () => {
 Test()
 ```
 
-````
+=== 示例
+
+````md
 ```js [测试用js]
 Sum = 0
 const Test = () => {
@@ -67,12 +78,14 @@ const Test = () => {
 Test()
 ```
 ````
+:::
 
 ### 图标
 
 部分标题会有专属图标
 
-例如:
+:::tabs
+=== 效果
 
 ```vue [vue]
 ```
@@ -82,6 +95,8 @@ Test()
 
 ```sh [pnpm]
 ```
+
+=== 示例
 
 ````md
 ```vue [vue]
@@ -93,6 +108,7 @@ Test()
 ```sh [pnpm]
 ```
 ````
+:::
 
 ## 行高亮
 
@@ -102,21 +118,8 @@ Test()
 * 多个单行: 例如 `{4,7,9}`
 * 多行与单行:例如 `{4,7-13,16,23-27,40}`
 
-```js {4-6,8,9}
-Sum = 0
-const Test = () => {
-    let Sum = 0
-    for (let i = 1; i <= 100; i++) {
-        Sum += i
-    }
-    let ResultElement = document.createElement('div')
-    ResultElement.innerHTML = `从1加到100的结果为: ${Sum}`
-    document.body.appendChild(ResultElement)
-}
-Test()
-```
-
-也可以使用`// [!code highlight]`注释实现行高亮
+:::tabs
+=== 效果
 
 ```js {4-6,8,9}
 Sum = 0
@@ -132,7 +135,9 @@ const Test = () => {
 Test()
 ```
 
-````
+=== 示例
+
+````md
 ```js {4-6,8,9}
 Sum = 0
 const Test = () => {
@@ -147,8 +152,50 @@ const Test = () => {
 Test()
 ```
 ````
+:::
 
 也可以使用`// [!code highlight]`注释实现行高亮
+
+:::tabs
+=== 效果
+
+```js {4-6,8,9}
+Sum = 0
+const Test = () => {
+    let Sum = 0
+    for (let i = 1; i <= 100; i++) {
+        Sum += i
+    }
+    let ResultElement = document.createElement('div')
+    ResultElement.innerHTML = `从1加到100的结果为: ${Sum}`
+    document.body.appendChild(ResultElement)
+}
+Test()
+```
+
+=== 示例
+
+````md
+```js {4-6,8,9}
+Sum = 0
+const Test = () => {
+    let Sum = 0
+    for (let i = 1; i <= 100; i++) {
+        Sum += i
+    }
+    let ResultElement = document.createElement('div')
+    ResultElement.innerHTML = `从1加到100的结果为: ${Sum}`
+    document.body.appendChild(ResultElement)
+}
+Test()
+```
+````
+:::
+
+也可以使用`// [!code highlight]`注释实现行高亮
+
+:::tabs
+=== 效果
 
 ```js
 Sum = 0
@@ -164,7 +211,9 @@ const Test = () => {
 Test()
 ```
 
-````
+=== 示例
+
+````md
 ```js
 Sum = 0
 const Test = () => {
@@ -179,10 +228,14 @@ const Test = () => {
 Test()
 ```
 ````
+:::
 
 ## 聚焦
 
 使用`// [!code focus]`注释实现代码聚焦
+
+:::tabs
+=== 效果
 
 ```js
 Sum = 0
@@ -198,7 +251,9 @@ const Test = () => {
 Test()
 ```
 
-````
+=== 示例
+
+````md
 ```js
 Sum = 0
 const Test = () => {
@@ -213,10 +268,14 @@ const Test = () => {
 Test()
 ```
 ````
+:::
 
 ## 颜色差异
 
 使用`// [!code --]`和`// [!code ++]`注释实现颜色差异
+
+:::tabs
+=== 效果
 
 ```js
 Sum = 0
@@ -232,7 +291,9 @@ const Test = () => {
 Test()
 ```
 
-````
+=== 示例
+
+````md
 ```js
 Sum = 0
 const Test = () => {
@@ -247,10 +308,14 @@ const Test = () => {
 Test()
 ```
 ````
+:::
 
 # 高亮错误和警告
 
 使用`// [!code error]`和`// [!code warning]`注释实现高亮错误和警告
+
+:::tabs
+=== 效果
 
 ```js
 Sum = 0
@@ -265,6 +330,8 @@ const Test = () => {
 }
 Test()
 ```
+
+=== 示例
 
 ````
 ```js
@@ -281,26 +348,39 @@ const Test = () => {
 Test()
 ```
 ````
+:::
 
 ## 导入代码片段
 
 可以通过下面的语法来从现有文件中导入代码片段
 
+:::tabs
+=== 效果
+
 <<< Test/CodeBoxTest.js
+
+=== 示例
 
 ```md
 <<< Test/CodeBoxTest.js
 ```
+:::
 
 ### 行高亮
 
 此语法同时还支持[行高亮](#行高亮)
 
+:::tabs
+=== 效果
+
 <<< Test/CodeBoxTest.js{4-6,8,9}
+
+=== 示例
 
 ```md
 <<< Test/CodeBoxTest.js{4-6,8,9}
 ```
+:::
 
 ### 指定语言
 
@@ -332,11 +412,17 @@ const Test = () => {
 Test()
 ```
 
+:::tabs
+=== 效果
+
+<<< Test/CodeBoxTest.js#snippet{1}
+
+=== 示例
+
 ```md
 <<< Test/CodeBoxTest.js#snippet{1}
 ```
-
-<<< Test/CodeBoxTest.js#snippet{1}
+:::
 
 ## 代码组
 
@@ -346,6 +432,9 @@ Test()
 ::: code-group
 :::
 ```
+
+::::tabs
+=== 效果
 
 ::: code-group
 ```sh [npm]
@@ -368,6 +457,8 @@ bun init
 git init
 ```
 :::
+
+=== 示例
 
 ````md
 ::: code-group
@@ -392,3 +483,4 @@ git init
 ```
 :::
 ````
+::::

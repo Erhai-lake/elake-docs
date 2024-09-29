@@ -3,9 +3,10 @@ import Theme from '@escook/vitepress-theme'
 import '@escook/vitepress-theme/style.css'
 // 分组代码块图标
 import 'virtual:group-icons.css'
-import { EnhanceAppContext } from 'vitepress'
 // 看板娘
 import { live2d } from './live2d'
+// 选项卡
+import { enhanceAppWithTabs } from 'vitepress-plugin-tabs/client'
 // 折叠面板全局组件
 import FoldingPanel from './Components/FoldingPanel.vue'
 // 自定义布局
@@ -18,6 +19,7 @@ export default {
     Layout: Layout,
     async enhanceApp({ app, router, siteData }) {
         app.component('FoldingPanel', FoldingPanel)
+        enhanceAppWithTabs(app)
         if (Theme.enhanceApp) {
             Theme.enhanceApp({ app, router, siteData })
         }

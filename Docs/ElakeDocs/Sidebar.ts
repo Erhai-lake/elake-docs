@@ -63,6 +63,10 @@ export const ElakeDocsSidebar: any[] = [
                     {
                         text: '折叠面板',
                         link: '/Docs/ElakeDocs/Components/FoldingPanel'
+                    },
+                    {
+                        text: '选项卡',
+                        link: '/Docs/ElakeDocs/Components/Tabs'
                     }
                 ]
             }

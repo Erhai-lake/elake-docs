@@ -1,10 +1,16 @@
 # 折叠面板
 
+:::tabs
+=== 效果
+
 <FoldingPanel></FoldingPanel>
+
+=== 示例
 
 ```vue
 <FoldingPanel></FoldingPanel>
 ```
+:::
 
 ## 参数
 
@@ -30,6 +36,9 @@
 
 更新日志就是个例子()
 
+:::tabs
+=== 效果
+
 <FoldingPanel Height="600" :Title="'洱海\n工作室\n的Logo'">
     <template #Title>
         <span>洱海工作室Logo</span>
@@ -38,6 +47,8 @@
         <img src="//api.elake.top/Logo.png" style="margin: 0 auto;">
     </template>
 </FoldingPanel>
+
+=== 示例
 
 ```md
 <FoldingPanel Height="600" :Title="'洱海\n工作室\n的Logo'">
@@ -49,3 +60,4 @@
     </template>
 </FoldingPanel>
 ```
+:::
