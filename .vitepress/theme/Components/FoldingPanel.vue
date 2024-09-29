@@ -40,16 +40,22 @@ export default {
     methods: {
         Folding(Event) {
             const FoldingPanelTitle = Event.target.parentNode
-            const FoldingPanel = FoldingPanelTitle.parentNode
-            const FoldingPanelContent = FoldingPanel.querySelector('.FoldingPanelContent')
-            const Height = getComputedStyle(FoldingPanelContent).getPropertyValue('--Height')
-            const Arrow = FoldingPanelTitle.querySelector('.Arrow')
-            if (FoldingPanelContent.style.height !== Height) {
-                FoldingPanelContent.style.height = Height
-                Arrow.style.transform = 'rotate(-180deg)'
-            } else {
-                FoldingPanelContent.style.height = '0px'
-                Arrow.style.transform = 'rotate(0deg)'
+            if (FoldingPanelTitle) {
+                const FoldingPanel = FoldingPanelTitle.parentNode
+                if (FoldingPanel) {
+                    const FoldingPanelContent = FoldingPanel.querySelector('.FoldingPanelContent')
+                    if (FoldingPanelContent) {
+                        const Height = getComputedStyle(FoldingPanelContent).getPropertyValue('--Height')
+                        const Arrow = FoldingPanelTitle.querySelector('.Arrow')
+                        if (FoldingPanelContent.style.height !== Height) {
+                            FoldingPanelContent.style.height = Height
+                            Arrow.style.transform = 'rotate(-180deg)'
+                        } else {
+                            FoldingPanelContent.style.height = '0px'
+                            Arrow.style.transform = 'rotate(0deg)'
+                        }
+                    }
+                }
             }
         }
     }

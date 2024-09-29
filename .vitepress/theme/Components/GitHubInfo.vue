@@ -23,6 +23,8 @@
                         fill="#9ca8af" p-id="1473"></path>
                 </svg>
                 <span>最后编辑于 {{ LastUpdateTime }}</span>
+                <button v-if="GitAPIDEBUG" style="margin-left: 10px;" title="点我测试GitHubAPI数据获取"
+                    @click="FetchData($event)">APITest</button>
             </template>
             <template #Content>
                 <ul>
@@ -55,6 +57,7 @@ export default {
     name: 'GitHubInfo',
     data() {
         return {
+            GitAPIDEBUG: import.meta.env.MODE === 'development',
             RefreshID: null,
             Route1: null,
             Route2: null,
@@ -83,23 +86,26 @@ export default {
             this.Interval = setInterval(this.GetLastUpdateTime, 50)
             this.FetchData()
         },
-        async FetchData() {
+        async FetchData(DEBUG = null) {
+            if (DEBUG) {
+                DEBUG.stopPropagation()
+                DEBUG = true
+            }
             this.Route2 = JSON.parse(JSON.stringify(this.Route1))
-            const Owner = 'Erhai-lake'
-            const Repo = 'ElakeDocs'
-            const FilePath = `${this.Route1.path}.md` || 'README'
             try {
                 let Response = null
                 let Commits = null
-                console.log(import.meta.env)
-                if (import.meta.env.MODE === 'development') {
-                    Response = '[{\"sha\":\"605f05e4fba0735fd8516424b6462ff02da49230\",\"commit\":{\"author\":{\"date\":\"2024-09-27T17:12:29Z\"},\"message\":\"3.0 重大更新 又一次重构文档!\\n使用 vitepress 作为框架,发现 docusaurus 不是很好用()\\n还好的是,经过上次重构,文档移植方便了许多,这次一天时间就重构完毕了\"},\"author\":{\"login\":\"Erhai-lake\"}},{\"sha\":\"ea04ef545ad64834b0ee1a9c11be84b8bb6f4743\",\"commit\":{\"author\":{\"date\":\"2024-09-18T07:13:11Z\"},\"message\":\"黑名单增加VS Code配置文件\"},\"author\":{\"login\":\"Qi-Month\"}},{\"sha\":\"9c43494bf2777ddd6ee122cd64fccb42eb179ea7\",\"commit\":{\"author\":{\"date\":\"2024-09-16T07:08:17Z\"},\"message\":\"重大更新,洱海文档2.0,更换了站点框架\\n文档全部重构!\"},\"author\":{\"login\":\"Erhai-lake\"}}]'
-                    Commits = JSON.parse(Response)
-                } else {
+                if (DEBUG || !this.GitAPIDEBUG) {
+                    const Owner = 'Erhai-lake'
+                    const Repo = 'ElakeDocs'
+                    const FilePath = `${this.Route1.path}`.replace(/html$/, 'md') || 'README.md'
                     Response = await fetch(
                         `https://api.github.com/repos/${Owner}/${Repo}/commits?path=${FilePath}`
                     )
                     Commits = await Response.json()
+                } else {
+                    Response = '[{\"sha\":\"605f05e4fba0735fd8516424b6462ff02da49230\",\"commit\":{\"author\":{\"date\":\"2024-09-27T17:12:29Z\"},\"message\":\"3.0 重大更新 又一次重构文档!\\n使用 vitepress 作为框架,发现 docusaurus 不是很好用()\\n还好的是,经过上次重构,文档移植方便了许多,这次一天时间就重构完毕了\"},\"author\":{\"login\":\"Erhai-lake\"}},{\"sha\":\"ea04ef545ad64834b0ee1a9c11be84b8bb6f4743\",\"commit\":{\"author\":{\"date\":\"2024-09-18T07:13:11Z\"},\"message\":\"黑名单增加VS Code配置文件\"},\"author\":{\"login\":\"Qi-Month\"}},{\"sha\":\"9c43494bf2777ddd6ee122cd64fccb42eb179ea7\",\"commit\":{\"author\":{\"date\":\"2024-09-16T07:08:17Z\"},\"message\":\"重大更新,洱海文档2.0,更换了站点框架\\n文档全部重构!\"},\"author\":{\"login\":\"Erhai-lake\"}}]'
+                    Commits = JSON.parse(Response)
                 }
                 const DataSet = new Set()
                 Commits.forEach(Item => {
