@@ -51,8 +51,10 @@ const UpdateProgress = (Current, Total) => {
     const Percentage = (Current / Total) * 100
     const Progress = Math.round(Percentage)
     const ProgressBar = '='.repeat(Progress) + ' '.repeat(100 - Progress)
-    process.stdout.clearLine()
-    process.stdout.cursorTo(0)
+    if (process.stdout && process.stdout.clearLine) {
+        process.stdout.clearLine();
+        process.stdout.cursorTo(0);
+    }
     process.stdout.write(`[${ProgressBar}] ${Progress}%`)
 }
 
