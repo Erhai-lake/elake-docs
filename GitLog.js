@@ -72,6 +72,11 @@ const Main = () => {
         process.stdout.clearLine()
         process.stdout.cursorTo(0)
     }
+    // 确保public目录存在
+    const OutputDir = path.dirname(OutputFile)
+    if (!fs.existsSync(OutputDir)) {
+        fs.mkdirSync(OutputDir, { recursive: true })
+    }
     const AllCommitsJson = JSON.stringify(AllCommits)
     // 将所有提交记录写入 JSON 文件
     fs.writeFileSync(OutputFile, AllCommitsJson)
