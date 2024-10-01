@@ -2,10 +2,12 @@
     "name": "elake_docs",
     "version": "1.0.0",
     "description": "",
+    "type": "module",
     "main": "index.js",
     "scripts": {
-        "dev": "vitepress dev --port 3000",
-        "build": "vitepress build",
+        "GitLog": "node GitLog.js",
+        "dev": "pnpm run GitLog && vitepress dev --port 3000",
+        "build": "pnpm run GitLog && vitepress build",
         "preview": "vitepress preview"
     },
     "keywords": [],

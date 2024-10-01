@@ -7,3 +7,5 @@ pnpm-lock.yaml
 .vitepress/dist
 # VS Code配置文件
 .vscode/settings.json
+# Git 提交记录
+public/CommitRecords.json
