@@ -13,6 +13,8 @@ jobs:
         steps:
         - name: 切换分支🀄
           uses: actions/checkout@v4
+          with:
+            fetch-depth: 0
 
         - name: 使用 node:20🌠
           uses: actions/setup-node@v2
