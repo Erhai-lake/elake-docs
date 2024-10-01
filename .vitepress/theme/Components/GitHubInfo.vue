@@ -86,8 +86,18 @@ export default {
         async FetchData() {
             this.Route2 = JSON.parse(JSON.stringify(this.Route1))
             try {
-                const Response = await fetch('/CommitRecords.json')
-                const AllCommits = await Response.json()
+                const StoredCommits = sessionStorage.getItem('AllCommits')
+                let AllCommits
+                if (StoredCommits) {
+                    // 如果有存储的数据,直接解析并使用
+                    AllCommits = JSON.parse(StoredCommits);
+                } else {
+                    // 如果没有存储的数据,发送网络请求获取
+                    const Response = await fetch('/CommitRecords.json')
+                    AllCommits = await Response.json()
+                    // 获取数据后存入sessionStorage
+                    sessionStorage.setItem('AllCommits', JSON.stringify(AllCommits))
+                }
                 const FilePath = `${this.Route1.path}`.replace(/html$/, 'md').replace(/\/Docs\//, '')
                 const Commits = AllCommits[FilePath]
                 const DataSet = new Set()
