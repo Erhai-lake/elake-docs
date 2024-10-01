@@ -52,10 +52,10 @@ const UpdateProgress = (Current, Total) => {
     const Progress = Math.round(Percentage)
     const ProgressBar = '='.repeat(Progress) + ' '.repeat(100 - Progress)
     if (process.stdout && process.stdout.clearLine) {
-        process.stdout.clearLine();
-        process.stdout.cursorTo(0);
+        process.stdout.clearLine()
+        process.stdout.cursorTo(0)
     }
-    process.stdout.write(`[${ProgressBar}] ${Progress}%`)
+    process.stdout.write(`[${ProgressBar}] ${Progress}%\r`)
 }
 
 // 主函数
@@ -68,8 +68,10 @@ const Main = () => {
         AllCommits[RelativePath] = GetGitLog(File)
         UpdateProgress(Index + 1, Files.length)
     })
-    process.stdout.clearLine()
-    process.stdout.cursorTo(0)
+    if (process.stdout && process.stdout.clearLine) {
+        process.stdout.clearLine()
+        process.stdout.cursorTo(0)
+    }
     const AllCommitsJson = JSON.stringify(AllCommits)
     // 将所有提交记录写入 JSON 文件
     fs.writeFileSync(OutputFile, AllCommitsJson)
