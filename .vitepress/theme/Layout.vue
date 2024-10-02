@@ -1,7 +1,8 @@
 <script setup>
 import Theme from '@escook/vitepress-theme'
 import ArticleMetadata from '/.vitepress/theme/Components/ArticleMetadata.vue'
-import GitHubInfo from '/.vitepress/theme/Components/GitHubInfo.vue'
+import Contributors from '/.vitepress/theme/Components/Contributors.vue'
+import UpdateLog from '/.vitepress/theme/Components/UpdateLog.vue'
 
 const { Layout } = Theme
 </script>
@@ -12,7 +13,8 @@ const { Layout } = Theme
             <ArticleMetadata />
         </template>
         <template #doc-footer-before>
-            <GitHubInfo />
+            <Contributors />
+            <UpdateLog />
         </template>
     </Layout>
 </template>

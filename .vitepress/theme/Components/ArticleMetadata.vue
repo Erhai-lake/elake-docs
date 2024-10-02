@@ -1,6 +1,6 @@
 <template>
-    <div class="Metadata" @click="RefreshData">
-        <div class="MetadataItem" @click="RefreshData">
+    <div class="Metadata">
+        <div class="MetadataItem">
             <svg t="1727498405398" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
                 p-id="1471" width="16" height="16">
                 <path
@@ -12,7 +12,7 @@
             </svg>
             <span>{{ LastUpdateTime }}</span>
         </div>
-        <div class="MetadataItem" @click="RefreshData">
+        <div class="MetadataItem">
             <svg t="1727498619384" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
                 p-id="3379" width="16" height="16">
                 <path
@@ -21,7 +21,7 @@
             </svg>
             <span>{{ WordCount }}字</span>
         </div>
-        <div class="MetadataItem" @click="RefreshData">
+        <div class="MetadataItem">
             <svg t="1727498683209" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
                 p-id="6592" width="16" height="16">
                 <path
@@ -37,91 +37,99 @@
             <span>{{ ReadingTime }}分钟</span>
         </div>
     </div>
-    <div class="Hitokoto" @click="GetHitokoto">{{ Hitokoto }}</div>
+    <div class="Hitokoto" @click="DebouncedGetHitokoto">{{ Hitokoto }}</div>
 </template>
 
-<script>
+<script setup lang="ts">
+import { ref, watch, onMounted } from 'vue'
 import { useRoute } from 'vitepress'
 
-export default {
-    name: 'ArticleMetadata',
-    data() {
-        return {
-            RefreshID: null,
-            Route1: null,
-            Route2: null,
-            LastUpdateTime: '0000-00-00 00:00',
-            Interval: null,
-            WordCount: 0,
-            ReadingTime: 0,
-            Hitokoto: '记录点滴 见证思考 分享成长[洱海工作室]'
-        }
-    },
-    created() {
-        this.Route1 = useRoute()
-    },
-    mounted() {
-        this.GetHitokoto()
-        this.RefreshID = setInterval(this.UpdateData, 1000)
-    },
-    methods: {
-        UpdateData() {
-            if (!this.Route2) {
-                this.RefreshData()
-            } else if (this.Route1.path !== this.Route2.path) {
-                this.RefreshData()
-                this.Route2 = JSON.parse(JSON.stringify(this.Route1))
+// 路由
+const Route = useRoute()
+
+let Interval: any
+
+// 路由监听
+watch((): string => Route.path, async (NewPath, OldPath): Promise<void> => {
+    if (NewPath !== OldPath) {
+        UpdateData()
+    }
+})
+
+// 组件挂载后执行
+onMounted(async (): Promise<void> => {
+    UpdateData()
+})
+
+const UpdateData: () => void = (): void => {
+    Interval = setInterval(GetLastUpdateTime, 50)
+    CalculateWordCount()
+    CalculateReadingTime()
+    GetHitokoto()
+}
+
+// 获取最后更新时间
+const LastUpdateTime: any = ref('')
+const GetLastUpdateTime: () => void = (): void => {
+    const OfficialLastUpdateTimeFatherElement: HTMLElement | null = document.querySelector('.last-updated > p')
+    if (OfficialLastUpdateTimeFatherElement) {
+        OfficialLastUpdateTimeFatherElement.style.display = 'none'
+        const OfficialLastUpdateTimeElement: HTMLElement | null = OfficialLastUpdateTimeFatherElement.querySelector('time')
+        if (OfficialLastUpdateTimeElement) {
+            const OfficialLastUpdateTime: string = OfficialLastUpdateTimeElement.innerHTML.replace(/\//g, '-')
+            if (OfficialLastUpdateTime && OfficialLastUpdateTime !== '') {
+                LastUpdateTime.value = OfficialLastUpdateTime
+                clearInterval(Interval)
             }
-        },
-        RefreshData() {
-            this.Route2 = JSON.parse(JSON.stringify(this.Route1))
-            this.Interval = setInterval(this.GetLastUpdateTime, 50)
-            this.CalculateWordCount()
-            this.CalculateReadingTime()
-        },
-        GetLastUpdateTime() {
-            const OfficialLastUpdateTimeFatherElement = document.querySelector('.last-updated > p')
-            if (OfficialLastUpdateTimeFatherElement) {
-                OfficialLastUpdateTimeFatherElement.style.display = 'none'
-                const OfficialLastUpdateTimeElement = OfficialLastUpdateTimeFatherElement.querySelector('time');
-                if (OfficialLastUpdateTimeElement) {
-                    const OfficialLastUpdateTime = OfficialLastUpdateTimeElement.innerHTML.replace(/\//g, '-')
-                    if (OfficialLastUpdateTime && OfficialLastUpdateTime !== '') {
-                        this.LastUpdateTime = OfficialLastUpdateTime
-                        clearInterval(this.Interval)
-                        this.Interval = null
-                    }
-                }
-            }
-        },
-        CalculateWordCount() {
-            const ContentElement = document.querySelector('main > div > div')
-            if (ContentElement) {
-                const TextContent = ContentElement.textContent || ''
-                this.WordCount = TextContent ? TextContent.length : 0
-            }
-        },
-        CalculateReadingTime() {
-            const WordsPerMinute = 200
-            this.ReadingTime = Math.ceil(this.WordCount / WordsPerMinute);
-        },
-        GetHitokoto() {
-            fetch('//international.v1.hitokoto.cn')
-                .then(response => response.json())
-                .then(Data => {
-                    const FromWho = Data.from_who ? ` [${Data.from_who}]` : ''
-                    const From = Data.from ? ` [${Data.from}]` : ''
-                    this.Hitokoto = `${Data.hitokoto}${FromWho}${From}`
-                })
         }
-    },
-    beforeDestroy() {
-        if (this.Interval) {
-            clearInterval(this.Interval)
-        }
-        clearInterval(this.RefreshID)
     }
 }
+
+// 计算字数
+const WordCount: any = ref('')
+const CalculateWordCount: () => void = (): void => {
+    const ContentElement: HTMLElement | null = document.querySelector('main > div > div')
+    if (ContentElement) {
+        const TextContent: string = ContentElement.textContent || ''
+        WordCount.value = TextContent ? TextContent.length : 0
+    }
+}
+
+// 计算阅读时长
+const ReadingTime: any = ref('')
+const CalculateReadingTime: () => void = (): void => {
+    const WordsPerMinute: number = 200
+    ReadingTime.value = Math.ceil(WordCount.value / WordsPerMinute)
+}
+
+// 获取一言
+const Hitokoto: any = ref('')
+const GetHitokoto: () => void = (): void => {
+    fetch('//international.v1.hitokoto.cn')
+        .then(response => response.json())
+        .then(Data => {
+            const FromWho: string = Data.from_who ? ` [${Data.from_who}]` : ''
+            const From: string = Data.from ? ` [${Data.from}]` : ''
+            Hitokoto.value = `${Data.hitokoto}${FromWho}${From}`
+        })
+        .catch((): void => {
+            Hitokoto.value = '记录点滴 见证思考 分享成长[洱海工作室]'
+        })
+}
+
+// 防抖
+const Debounce: (Fun: any, Time: number) => any = (Fun, Time): any => {
+    let Timeout: any
+    return function (...args: any[]) {
+        clearTimeout(Timeout)
+        Timeout = setTimeout(() => {
+            Fun.apply(this, args)
+        }, Time)
+    }
+}
+
+// 防抖一言
+const DebouncedGetHitokoto = Debounce(GetHitokoto, 1000)
 </script>
 
 <style scoped>
@@ -162,5 +170,7 @@ export default {
     width: 100%;
     color: #9ca8af;
     text-align: center;
+    cursor: pointer;
+    user-select: none;
 }
 </style>

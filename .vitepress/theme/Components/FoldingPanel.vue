@@ -24,37 +24,35 @@
     </div>
 </template>
 
-<script>
-export default {
-    name: 'FoldingPanel',
-    props: {
-        Height: {
-            type: Number,
-            default: 300
-        },
-        Title: {
-            type: String,
-            default: ''
-        }
+<script setup lang="ts">
+import { defineProps } from 'vue'
+
+defineProps({
+    Height: {
+        type: Number,
+        default: 300
     },
-    methods: {
-        Folding(Event) {
-            const FoldingPanelTitle = Event.target.parentNode
-            if (FoldingPanelTitle) {
-                const FoldingPanel = FoldingPanelTitle.parentNode
-                if (FoldingPanel) {
-                    const FoldingPanelContent = FoldingPanel.querySelector('.FoldingPanelContent')
-                    if (FoldingPanelContent) {
-                        const Height = getComputedStyle(FoldingPanelContent).getPropertyValue('--Height')
-                        const Arrow = FoldingPanelTitle.querySelector('.Arrow')
-                        if (FoldingPanelContent.style.height !== Height) {
-                            FoldingPanelContent.style.height = Height
-                            Arrow.style.transform = 'rotate(-180deg)'
-                        } else {
-                            FoldingPanelContent.style.height = '0px'
-                            Arrow.style.transform = 'rotate(0deg)'
-                        }
-                    }
+    Title: {
+        type: String,
+        default: ''
+    }
+})
+
+const Folding: (Event: any) => void = (Event): void => {
+    const FoldingPanelTitle: any = Event.target.parentNode
+    if (FoldingPanelTitle) {
+        const FoldingPanel: any = FoldingPanelTitle.parentNode
+        if (FoldingPanel) {
+            const FoldingPanelContent: any = FoldingPanel.querySelector('.FoldingPanelContent')
+            if (FoldingPanelContent) {
+                const Height: string = getComputedStyle(FoldingPanelContent).getPropertyValue('--Height')
+                const Arrow: any = FoldingPanelTitle.querySelector('.Arrow')
+                if (FoldingPanelContent.style.height !== Height) {
+                    FoldingPanelContent.style.height = Height
+                    Arrow.style.transform = 'rotate(-180deg)'
+                } else {
+                    FoldingPanelContent.style.height = '0px'
+                    Arrow.style.transform = 'rotate(0deg)'
                 }
             }
         }

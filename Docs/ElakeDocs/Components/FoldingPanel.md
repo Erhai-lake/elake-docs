@@ -14,9 +14,9 @@
 
 ## 参数
 
-* Height
+* Height 整数型
   * 折叠面板高度
-* Title
+* Title 字符串
   * 鼠标悬浮时的标题
 
 ## 插销
@@ -39,7 +39,7 @@
 :::tabs
 === 效果
 
-<FoldingPanel Height="600" :Title="'洱海\n工作室\n的Logo'">
+<FoldingPanel :Height=600 :Title="'洱海\n工作室\n的Logo'">
     <template #Title>
         <span>洱海工作室Logo</span>
     </template>
@@ -51,7 +51,7 @@
 === 示例
 
 ```md
-<FoldingPanel Height="600" :Title="'洱海\n工作室\n的Logo'">
+<FoldingPanel :Height=600 :Title="'洱海\n工作室\n的Logo'">
     <template #Title>
         <span>洱海工作室Logo</span>
     </template>
