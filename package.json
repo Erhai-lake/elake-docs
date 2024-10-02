@@ -6,9 +6,11 @@
     "main": "index.js",
     "scripts": {
         "GitLog": "node GitLog.js",
-        "dev": "pnpm run GitLog && vitepress dev --port 3000",
-        "build": "pnpm run GitLog && vitepress build",
-        "preview": "vitepress preview"
+        "PictureSHA1": "node PictureSHA1.js",
+        "dev": "pnpm run PictureSHA1 && pnpm run GitLog && vitepress dev --port 3000",
+        "build": "pnpm run PictureSHA1 && pnpm run GitLog && vitepress build --port 3001",
+        "preview": "vitepress preview",
+        "Upload": "git checkout build && git merge master && git push && git checkout master"
     },
     "keywords": [],
     "author": "",

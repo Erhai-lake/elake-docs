@@ -83,7 +83,7 @@
 
 | 步骤  |                                               正则                                               |                                               文本                                               |
 | :---: | :----------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------: |
-|   1   | ![76f02a9aa5fce837adb33e32a0db1aea2ec6eb5f](Assets/76f02a9aa5fce837adb33e32a0db1aea2ec6eb5f.png) | ![e87954f62c9366aa1380188947ac619e5a78a61f](Assets/bbcf235cf51e7b6c31dac1f4507fe268f11ee144.png) |
+|   1   | ![76f02a9aa5fce837adb33e32a0db1aea2ec6eb5f](Assets/76f02a9aa5fce837adb33e32a0db1aea2ec6eb5f.png) | ![bbcf235cf51e7b6c31dac1f4507fe268f11ee144](Assets/bbcf235cf51e7b6c31dac1f4507fe268f11ee144.png) |
 |   2   | ![47fce99ab3122a3320a66116c28dc5a4829c2ca1](Assets/47fce99ab3122a3320a66116c28dc5a4829c2ca1.png) | ![83531b70cae629e3ce568b071bee11516a219eae](Assets/83531b70cae629e3ce568b071bee11516a219eae.png) |
 |   3   | ![e87954f62c9366aa1380188947ac619e5a78a61f](Assets/e87954f62c9366aa1380188947ac619e5a78a61f.png) | ![c6c826ce7cb7261e1fce5efda1a006c9cf038ced](Assets/c6c826ce7cb7261e1fce5efda1a006c9cf038ced.png) |
 |   4   | ![51765e2520dfe5a5a975f5f05f34805f9b785ecd](Assets/51765e2520dfe5a5a975f5f05f34805f9b785ecd.png) | ![50ab1e3bb60ba1b49b177902aee024ce09b89f19](Assets/50ab1e3bb60ba1b49b177902aee024ce09b89f19.png) |

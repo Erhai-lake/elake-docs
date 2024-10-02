@@ -14,7 +14,7 @@
 prompt('请输入用户名:')
 ```
 
-![6-5](Assets/07d2cb663e19c26a6bd53d0ea1ee821272a8344f.png)
+![07d2cb663e19c26a6bd53d0ea1ee821272a8344f](Assets/07d2cb663e19c26a6bd53d0ea1ee821272a8344f.png)
 
 :::warning
 这是WebAPI的内容,原生JS并没有这个语句

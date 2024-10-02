@@ -25,8 +25,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
-
 defineProps({
     Height: {
         type: Number,

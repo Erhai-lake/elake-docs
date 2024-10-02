@@ -173,30 +173,6 @@ while (i <= 3) {
 
 如果没有你想要的,你可以自己写一个,文档的框架是[Vitepress](//vitepress.dev),经过检查后可以加入
 
-## 图片插入格式
-
-```md
-[图片SHA1](Assets/图片SHA1.png)
-```
-
-SHA1获取方式:cmd输入命令`certutil -hashfile 图片地址 SHA1`,例如`certutil -hashfile 2-1.png SHA1`
-
-### 正例
-
-```md
-[4ab7e42e6d6cda0a1cafa04d208a4820c3c70cfc](Assets/4ab7e42e6d6cda0a1cafa04d208a4820c3c70cfc.png)
-
-[baafbc8f716001dc4416df2e56ed951ae714abf0](Assets/baafbc8f716001dc4416df2e56ed951ae714abf0.png)
-```
-
-### 反例
-
-```md
-[编写规范的图1](assets/编写规范的图1.png)
-
-[编写规范的图2](assets/编写规范的图2.png)
-```
-
 ## 外网超链接插入格式
 
 ```md

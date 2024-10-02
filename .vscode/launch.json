@@ -4,10 +4,43 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "启动",
+            "name": "生成Git日志",
             "runtimeExecutable": "pnpm",
-            "runtimeArgs": ["run", "dev"],
-            "skipFiles": ["<node_internals>/**"],
+            "runtimeArgs": [
+                "run",
+                "GitLog"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "图片转SHA1",
+            "runtimeExecutable": "pnpm",
+            "runtimeArgs": [
+                "run",
+                "PictureSHA1"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "本地调试",
+            "runtimeExecutable": "pnpm",
+            "runtimeArgs": [
+                "run",
+                "dev"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
             "console": "integratedTerminal"
         },
         {
@@ -15,8 +48,13 @@
             "request": "launch",
             "name": "构建",
             "runtimeExecutable": "pnpm",
-            "runtimeArgs": ["run", "build"],
-            "skipFiles": ["<node_internals>/**"],
+            "runtimeArgs": [
+                "run",
+                "build"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
             "console": "integratedTerminal"
         },
         {
@@ -24,8 +62,13 @@
             "request": "launch",
             "name": "预览",
             "runtimeExecutable": "pnpm",
-            "runtimeArgs": ["run", "preview"],
-            "skipFiles": ["<node_internals>/**"],
+            "runtimeArgs": [
+                "run",
+                "preview"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
             "console": "integratedTerminal"
         }
     ]
