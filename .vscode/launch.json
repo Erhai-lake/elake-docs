@@ -70,6 +70,20 @@
                 "<node_internals>/**"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "上传(!警告!)",
+            "runtimeExecutable": "pnpm",
+            "runtimeArgs": [
+                "run",
+                "Upload"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
