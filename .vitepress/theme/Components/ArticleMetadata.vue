@@ -10,7 +10,7 @@
                     d="M685.6 638.592a32 32 0 0 1-14.032-2.96l-178.048-73.888a36.8 36.8 0 0 1-22.912-34.016V236.672a36.944 36.944 0 1 1 73.888 0v266.72l155.2 64.272a36.336 36.336 0 0 1 19.952 48 37.616 37.616 0 0 1-34.048 22.928z"
                     fill="#9ca8af" p-id="1473"></path>
             </svg>
-            <span>{{ LastUpdateTime }}</span>
+            <span class="LastUpdateTimeText">{{ LastUpdateTime }}</span>
         </div>
         <div class="MetadataItem">
             <svg t="1727498619384" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -145,6 +145,8 @@ const DebouncedGetHitokoto = Debounce(GetHitokoto, 1000)
         padding: 3px 20px;
         margin: 0 auto;
         display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
         cursor: pointer;
         border-radius: 50px;
@@ -160,7 +162,11 @@ const DebouncedGetHitokoto = Debounce(GetHitokoto, 1000)
         }
 
         svg {
-            margin-right: 10px;
+            margin-bottom: 5px;
+        }
+
+        .LastUpdateTimeText {
+            font-size: 7px;
         }
     }
 }
@@ -172,5 +178,20 @@ const DebouncedGetHitokoto = Debounce(GetHitokoto, 1000)
     text-align: center;
     cursor: pointer;
     user-select: none;
+}
+
+@media only screen and (min-width: 960px) {
+    .MetadataItem {
+        flex-direction: row !important;
+
+        svg {
+            margin-bottom: 0 !important;
+            margin-right: 5px !important;
+        }
+
+        .LastUpdateTimeText {
+            font-size: 16px !important;
+        }
+    }
 }
 </style>

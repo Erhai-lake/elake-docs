@@ -4,7 +4,7 @@
         <FoldingPanel :Height=500 :Title="'点击展开日志\n所有元素鼠标悬浮可显示更多\n点击头像跳转用户页\n点击哈希跳转提交记录'" class="FoldingPanel">
             <template #Title>
                 <svg t="1727498405398" class="icon" viewBox="0 0 1024 1024" version="1.1"
-                    xmlns="http://www.w3.org/2000/svg" p-id="1471" width="16" height="16">
+                    xmlns="http://www.w3.org/2000/svg" p-id="1471" width="16" height="16" style="margin-right: 5px;">
                     <path
                         d="M512.736 992a483.648 483.648 0 0 1-164.672-28.8 36.88 36.88 0 1 1 25.104-69.36 407.456 407.456 0 1 0-184.608-136.512A36.912 36.912 0 0 1 129.488 801.6a473.424 473.424 0 0 1-97.472-290A480 480 0 1 1 512.736 992z"
                         fill="#9ca8af" p-id="1472"></path>
@@ -17,12 +17,14 @@
             <template #Content>
                 <ul>
                     <li v-for="Item in UpdateLogData" :key="Item.id">
-                        <svg t="1727530302325" class="icon" viewBox="0 0 1024 1024" version="1.1"
-                            xmlns="http://www.w3.org/2000/svg" p-id="8220" width="26" height="26">
-                            <path
-                                d="M981.333333 469.333333h-260.266666c-21.333333-98.133333-106.666667-170.666667-209.066667-170.666666s-187.733333 72.533333-209.066667 170.666666H42.666667c-25.6 0-42.666667 17.066667-42.666667 42.666667s17.066667 42.666667 42.666667 42.666667h260.266666c21.333333 98.133333 106.666667 170.666667 209.066667 170.666666s187.733333-72.533333 209.066667-170.666666H981.333333c25.6 0 42.666667-17.066667 42.666667-42.666667s-21.333333-42.666667-42.666667-42.666667z m-469.333333 170.666667c-72.533333 0-128-55.466667-128-128s55.466667-128 128-128 128 55.466667 128 128-55.466667 128-128 128z"
-                                p-id="8221" fill="#9ca8af"></path>
-                        </svg>
+                        <div class="CommitSvg">
+                            <svg t="1727530302325" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="8220" width="26" height="26">
+                                <path
+                                    d="M981.333333 469.333333h-260.266666c-21.333333-98.133333-106.666667-170.666667-209.066667-170.666666s-187.733333 72.533333-209.066667 170.666666H42.666667c-25.6 0-42.666667 17.066667-42.666667 42.666667s17.066667 42.666667 42.666667 42.666667h260.266666c21.333333 98.133333 106.666667 170.666667 209.066667 170.666666s187.733333-72.533333 209.066667-170.666666H981.333333c25.6 0 42.666667-17.066667 42.666667-42.666667s-21.333333-42.666667-42.666667-42.666667z m-469.333333 170.666667c-72.533333 0-128-55.466667-128-128s55.466667-128 128-128 128 55.466667 128 128-55.466667 128-128 128z"
+                                    p-id="8221" fill="#9ca8af"></path>
+                            </svg>
+                        </div>
                         <div class="CommitAvatar" :style="{ backgroundImage: `url('${Item.AvatarUrl}')` }"
                             :alt="Item.Name" :title="Item.Name + '\n点击跳转GitHub'" @click="OpenGitHub(0, Item.Name)">
                         </div>
@@ -180,23 +182,29 @@ const OpenGitHub: (Id: number, Value: string) => void = (Id, Value): void => {
     border-radius: 10px;
     user-select: none;
 
-    svg {
-        margin-right: 10px;
-    }
-
-
     ul {
         li {
             padding: 5px 0;
             display: grid;
-            grid-template-columns: 26px 26px 120px 4fr 100px;
+            grid-template-columns: 26px 1fr;
+            grid-template-rows: repeat(4, 36px);
             grid-column-gap: 20px;
 
-            svg {
-                transform: rotate(90deg);
+
+            .CommitSvg {
+                grid-area: 1 / 1 / 5 / 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                svg {
+                    transform: rotate(90deg);
+                }
             }
 
             .CommitAvatar {
+                margin: 0 auto;
+                grid-area: 1 / 2 / 2 / 3;
                 width: 26px;
                 height: 26px;
                 border-radius: 50%;
@@ -206,7 +214,10 @@ const OpenGitHub: (Id: number, Value: string) => void = (Id, Value): void => {
             }
 
             .CommitSha {
-                text-align: center;
+                grid-area: 2 / 2 / 3 / 3;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 color: #dadaff;
                 background-color: #009dffa6;
                 border-radius: 10px;
@@ -214,18 +225,47 @@ const OpenGitHub: (Id: number, Value: string) => void = (Id, Value): void => {
             }
 
             .CommitContent {
+                grid-area: 3 / 2 / 4 / 3;
                 width: 100%;
+                text-align: center;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
 
             .CommitTime {
+                grid-area: 4 / 2 / 5 / 3;
                 text-align: center;
             }
 
             &:nth-child(odd) .CommitSha {
                 background-color: #ff0000a6;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    ul {
+        li {
+            grid-template-columns: 26px 26px 120px 4fr 100px !important;
+            grid-template-rows: 1fr !important;
+
+
+            .CommitSvg {
+                grid-area: 1 / 1 / 2 / 2 !important;
+            }
+
+            .CommitSha {
+                grid-area: 1 / 3 / 2 / 4 !important;
+            }
+
+            .CommitContent {
+                grid-area: 1 / 4 / 2 / 5 !important;
+            }
+
+            .CommitTime {
+                grid-area: 1 / 5 / 2 / 6 !important;
             }
         }
     }
