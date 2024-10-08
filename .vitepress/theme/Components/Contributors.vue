@@ -2,8 +2,8 @@
     <div class="Contributors">
         <p class="Title">贡献者</p>
         <div class="ContributorsContainer">
-            <div v-for="Item in ContributorsData" :key="Item.id" @click="OpenGitHub(Item.Name)"
-                class="ContributorsItem">
+            <div v-for="Item in ContributorsData" :key="Item.id" @click="OpenGitHub(Item.Name)" class="ContributorsItem"
+                @mouseover="HandleMouseOver" @mouseleave="HandleMouseLeave">
                 <div class="Avatar" :style="{ backgroundImage: `url('${Item.AvatarUrl}')` }" :alt="Item.Name"></div>
                 <span>{{ Item.Name }}</span>
             </div>
@@ -73,6 +73,48 @@ const GetContributors: () => Promise<void> = async (): Promise<void> => {
 const OpenGitHub: (Value: string) => void = (Value): void => {
     window.open(`//github.com/${Value}`)
 }
+
+let CurrentHoveredItem: Element | null = null
+let HoverTimer: any = null
+// 鼠标移入
+const HandleMouseOver: (event: MouseEvent) => void = (event: MouseEvent): void => {
+    const Item: HTMLElement = event.target as HTMLElement
+    if (!Item.classList.contains('ContributorsItem') || Item === CurrentHoveredItem) return
+    CurrentHoveredItem = Item
+    const Avatar: HTMLElement | null = Item.querySelector('.Avatar')
+    if (!Avatar) return
+    Avatar.classList.add('Rotate')
+    let HoverTime: number = 0
+    const Father: HTMLElement | null = Item.parentElement
+    if (Father === null) return
+    HoverTimer = setInterval(() => {
+        HoverTime += 1
+        switch (HoverTime) {
+            case 5:
+                Item.classList.add('Rotate')
+                break
+            case 7:
+                Father.classList.add('Rotate')
+                break
+        }
+    }, 1000)
+}
+
+// 鼠标移出
+const HandleMouseLeave: (event: MouseEvent) => void = (event: MouseEvent): void => {
+    const Item: HTMLElement = event.target as HTMLElement
+    if (!Item.classList.contains('ContributorsItem') || Item !== CurrentHoveredItem) return
+    clearInterval(HoverTimer)
+    CurrentHoveredItem = null
+    HoverTimer = null
+    Item.classList.remove('Rotate')
+    const Avatar: HTMLElement | null = Item.querySelector('.Avatar')
+    if (!Avatar) return
+    Avatar.classList.remove('Rotate')
+    const Father: HTMLElement | null = Item.parentElement
+    if (Father === null) return
+    Father.classList.remove('Rotate')
+}
 </script>
 
 <style scoped>
@@ -107,7 +149,6 @@ const OpenGitHub: (Value: string) => void = (Value): void => {
 
             &:hover .Avatar {
                 transition: all 0.15s;
-                animation: RBG 0.01s linear infinite;
             }
 
             &::before {
@@ -149,6 +190,14 @@ const OpenGitHub: (Value: string) => void = (Value): void => {
             }
         }
     }
+}
+
+.Rotate {
+    animation: Rotate 0.01s linear infinite;
+}
+
+.Fly {
+    animation: Fly 0.5s linear
 }
 
 @keyframes RBG {
