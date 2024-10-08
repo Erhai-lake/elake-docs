@@ -153,7 +153,7 @@ const TimeConversion: (DateString: string) => string = (DateString): string => {
     } else if (Months < 12) {
         return `${Months} 月前`
     } else if (Years < 1) {
-        return `${Months} 月前`
+        return `${Months} 年前`
     } else {
         return DateString
     }
