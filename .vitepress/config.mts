@@ -10,6 +10,10 @@ import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-i
 import mdItCustomAttrs from 'markdown-it-custom-attrs'
 // 选项卡
 import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
+// 自定义图片尺寸
+import { imgSize } from '@mdit/plugin-img-size'
+// 对齐方式
+import { align } from '@mdit/plugin-align'
 // 目录
 import { Sidebar } from './Sidebar'
 // 导航栏
@@ -60,6 +64,10 @@ export default withMermaid({
                 "data-fancybox": "gallery",
             })
             MD.use(tabsMarkdownPlugin)
+            // 自定义图片尺寸
+            MD.use(imgSize)
+            // 对齐方式
+            MD.use(align)
         },
         // 启用数学公式
         math: true

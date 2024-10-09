@@ -33,6 +33,10 @@ export const ElakeDocsSidebar: any[] = [
                 collapsed: false,
                 items: [
                     {
+                        text: '图片',
+                        link: '/Docs/ElakeDocs/Components/Picture'
+                    },
+                    {
                         text: '报警框',
                         link: '/Docs/ElakeDocs/Components/AlarmBox'
                     },
@@ -67,6 +71,10 @@ export const ElakeDocsSidebar: any[] = [
                     {
                         text: '选项卡',
                         link: '/Docs/ElakeDocs/Components/Tabs'
+                    },
+                    {
+                        text: '对齐方式',
+                        link: '/Docs/ElakeDocs/Components/Align'
                     }
                 ]
             }
