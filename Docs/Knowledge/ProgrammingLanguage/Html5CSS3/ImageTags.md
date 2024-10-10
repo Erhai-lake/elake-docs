@@ -24,7 +24,7 @@
 ```html
 <html>
     <body>
-        <img src="//api.elake.top/Logo.png" alt="ElakeLogo" title="洱海工作室Logo" width="100" height="100" />
+        <img src="//api.elake.top/Logo/" alt="ElakeLogo" title="洱海工作室Logo" width="100" height="100" />
     </body>
 </html>
 ```

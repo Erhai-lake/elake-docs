@@ -63,7 +63,7 @@ const GetContributors: () => Promise<void> = async (): Promise<void> => {
         ContributorsData.value = [
             {
                 Name: '洱海工作室',
-                AvatarUrl: '//api.elake.top/Logo.png'
+                AvatarUrl: '//api.elake.top/Logo/'
             }
         ]
     }

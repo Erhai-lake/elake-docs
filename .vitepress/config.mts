@@ -36,7 +36,7 @@ export default withMermaid({
     // 头部
     head: [
         // Logo
-        ['link', { rel: 'icon', href: '//api.elake.top/Logo.png' },],
+        ['link', { rel: 'icon', href: '//api.elake.top/Logo/' },],
         // 图集
         ["link", { rel: "stylesheet", href: "//cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" }],
         ["script", { src: "//cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js" }],
@@ -86,7 +86,7 @@ export default withMermaid({
         // i18
         i18nRouting: false,
         // Logo
-        logo: '//api.elake.top/Logo.png',
+        logo: '//api.elake.top/Logo/',
         // 导航栏
         nav: Navbar,
         // 侧边栏

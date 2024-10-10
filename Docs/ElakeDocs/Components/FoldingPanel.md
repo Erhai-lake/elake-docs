@@ -44,7 +44,7 @@
         <span>洱海工作室Logo</span>
     </template>
     <template #Content>
-        <img src="//api.elake.top/Logo.png" style="margin: 0 auto;">
+        <img src="//api.elake.top/Logo/" style="margin: 0 auto;">
     </template>
 </FoldingPanel>
 
@@ -56,7 +56,7 @@
         <span>洱海工作室Logo</span>
     </template>
     <template #Content>
-        <img src="//api.elake.top/Logo.png" style="margin: 0 auto;">
+        <img src="//api.elake.top/Logo/" style="margin: 0 auto;">
     </template>
 </FoldingPanel>
 ```

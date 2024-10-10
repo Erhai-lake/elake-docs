@@ -18,7 +18,7 @@ window.addEventListemer('load', () => {
 这个是监听图片的,其他视频外联CSS,JS等,同理
 
 ```html
-<img src="https://api.elake.top/Logo.png">
+<img src="https://api.elake.top/Logo/">
 <script>
     document.querySelector('img').addEventListener('load', () => {
         console.log('图片加载完成')

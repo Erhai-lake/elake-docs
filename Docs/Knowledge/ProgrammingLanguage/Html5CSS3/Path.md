@@ -66,7 +66,7 @@
 <img src="C:\images\1.png">
 <img src="C:/images/1.png">
 <!-- 在线链接也算是绝对路径 -->
-<img src="//api.elake.top/Logo.png">
+<img src="//api.elake.top/Logo/">
 ```
 
 Windows 默认是`\`,其他系统是`/`, 建议统一使用`/`

@@ -5,12 +5,12 @@
 :::tabs
 === 效果
 
-![图片](//api.elake.top/Logo.png)
+![图片](//api.elake.top/Logo/)
 
 === 示例
 
 ```md
-![图片](//api.elake.top/Logo.png)
+![图片](//api.elake.top/Logo/)
 ```
 :::
 
@@ -21,19 +21,19 @@
 :::tabs
 === 效果
 
-![图片](//api.elake.top/Logo.png =100x100)
+![图片](//api.elake.top/Logo/ =100x100)
 
-![图片](//api.elake.top/Logo.png =150x)
+![图片](//api.elake.top/Logo/ =150x)
 
-![图片](//api.elake.top/Logo.png =x100)
+![图片](//api.elake.top/Logo/ =x100)
 
 === 示例
 
 ```md
-![图片](//api.elake.top/Logo.png =100x100)
+![图片](//api.elake.top/Logo/ =100x100)
 
-![图片](//api.elake.top/Logo.png =150x)
+![图片](//api.elake.top/Logo/ =150x)
 
-![图片](//api.elake.top/Logo.png =x150)
+![图片](//api.elake.top/Logo/ =x150)
 ```
 :::
